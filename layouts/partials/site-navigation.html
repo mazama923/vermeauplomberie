@@ -1,0 +1,47 @@
+<nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l center items-center justify-between">
+    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline">
+      {{ with .Site.Params.site_logo }}
+        <img src="{{ urls.RelURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
+      {{ else }}
+        {{ .Site.Title }}
+      {{ end }}
+    </a>
+    <div class="flex-l items-center">
+      {{ partials.Include "i18nlist.html" . }}
+      <ul class="{{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
+        <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
+          <a class="hover-white white-90 no-underline" href="/a-propos">A propos</a>
+        </li>
+        <li class="list f5 f4-ns fw4 dib relative {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
+          <button onclick="document.getElementById('services-dropdown').classList.toggle('dn')" class="hover-white white-90 no-underline bg-transparent bn pointer">
+            Services
+          </button>
+          <ul id="services-dropdown" class="absolute bg-white-90 pa2 mt2 shadow-1 dn" style="min-width:200px; z-index:100;">
+            <li><a class="black no-underline db pv1 ph2" href="/services/depannage">Dépannage</a></li>
+            <li><a class="black no-underline db pv1 ph2" href="/services/renovation-salle-de-bain">Rénovations de salle de bain</a></li>
+            <li><a class="black no-underline db pv1 ph2" href="/services/installation-plomberie">Installation de plomberie</a></li>
+            <li><a class="black no-underline db pv1 ph2" href="/services/climatisation">Climatisations</a></li>
+          </ul>
+        </li>
+        <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
+          <a class="hover-white white-90 no-underline" href="/realisations">Réalisations</a>
+        </li>
+        <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
+          <a class="hover-bg-light-blue bg-animate white-90 no-underline ba b--white-90 br2 ph3 pv2" href="/contact" style="background-color: #E64011; border-color: #E64011;">Contactez-moi</a>
+        </li>
+      </ul>
+      {{ partials.IncludeCached "social/follow.html" . }}
+    </div>
+  </div>
+</nav>
+<script>
+document.addEventListener('click', function(e) {
+  var dropdown = document.getElementById('services-dropdown');
+  var button = dropdown.previousElementSibling;
+  if (!dropdown.contains(e.target) && e.target !== button) {
+    dropdown.classList.add('dn');
+  }
+});
+</script>
+
