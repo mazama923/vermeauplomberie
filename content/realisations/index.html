@@ -1,0 +1,3190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+    /* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmZiArmlw.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmQiArmlw.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmYiArmlw.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmXiArmlw.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* math */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVnoiArmlw.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVn6iArmlw.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmbiArmlw.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmaiArmlw.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbVmUiAo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVmZiArmlw.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVmQiArmlw.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVmYiArmlw.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVmXiArmlw.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* math */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVnoiArmlw.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVn6iArmlw.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVmbiArmlw.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVmaiArmlw.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuaabVmUiAo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVmZiArmlw.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVmQiArmlw.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVmYiArmlw.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVmXiArmlw.woff2) format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* math */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVnoiArmlw.woff2) format('woff2');
+  unicode-range: U+0302-0303, U+0305, U+0307-0308, U+0310, U+0312, U+0315, U+031A, U+0326-0327, U+032C, U+032F-0330, U+0332-0333, U+0338, U+033A, U+0346, U+034D, U+0391-03A1, U+03A3-03A9, U+03B1-03C9, U+03D1, U+03D5-03D6, U+03F0-03F1, U+03F4-03F5, U+2016-2017, U+2034-2038, U+203C, U+2040, U+2043, U+2047, U+2050, U+2057, U+205F, U+2070-2071, U+2074-208E, U+2090-209C, U+20D0-20DC, U+20E1, U+20E5-20EF, U+2100-2112, U+2114-2115, U+2117-2121, U+2123-214F, U+2190, U+2192, U+2194-21AE, U+21B0-21E5, U+21F1-21F2, U+21F4-2211, U+2213-2214, U+2216-22FF, U+2308-230B, U+2310, U+2319, U+231C-2321, U+2336-237A, U+237C, U+2395, U+239B-23B7, U+23D0, U+23DC-23E1, U+2474-2475, U+25AF, U+25B3, U+25B7, U+25BD, U+25C1, U+25CA, U+25CC, U+25FB, U+266D-266F, U+27C0-27FF, U+2900-2AFF, U+2B0E-2B11, U+2B30-2B4C, U+2BFE, U+3030, U+FF5B, U+FF5D, U+1D400-1D7FF, U+1EE00-1EEFF;
+}
+/* symbols */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVn6iArmlw.woff2) format('woff2');
+  unicode-range: U+0001-000C, U+000E-001F, U+007F-009F, U+20DD-20E0, U+20E2-20E4, U+2150-218F, U+2190, U+2192, U+2194-2199, U+21AF, U+21E6-21F0, U+21F3, U+2218-2219, U+2299, U+22C4-22C6, U+2300-243F, U+2440-244A, U+2460-24FF, U+25A0-27BF, U+2800-28FF, U+2921-2922, U+2981, U+29BF, U+29EB, U+2B00-2BFF, U+4DC0-4DFF, U+FFF9-FFFB, U+10140-1018E, U+10190-1019C, U+101A0, U+101D0-101FD, U+102E0-102FB, U+10E60-10E7E, U+1D2C0-1D2D3, U+1D2E0-1D37F, U+1F000-1F0FF, U+1F100-1F1AD, U+1F1E6-1F1FF, U+1F30D-1F30F, U+1F315, U+1F31C, U+1F31E, U+1F320-1F32C, U+1F336, U+1F378, U+1F37D, U+1F382, U+1F393-1F39F, U+1F3A7-1F3A8, U+1F3AC-1F3AF, U+1F3C2, U+1F3C4-1F3C6, U+1F3CA-1F3CE, U+1F3D4-1F3E0, U+1F3ED, U+1F3F1-1F3F3, U+1F3F5-1F3F7, U+1F408, U+1F415, U+1F41F, U+1F426, U+1F43F, U+1F441-1F442, U+1F444, U+1F446-1F449, U+1F44C-1F44E, U+1F453, U+1F46A, U+1F47D, U+1F4A3, U+1F4B0, U+1F4B3, U+1F4B9, U+1F4BB, U+1F4BF, U+1F4C8-1F4CB, U+1F4D6, U+1F4DA, U+1F4DF, U+1F4E3-1F4E6, U+1F4EA-1F4ED, U+1F4F7, U+1F4F9-1F4FB, U+1F4FD-1F4FE, U+1F503, U+1F507-1F50B, U+1F50D, U+1F512-1F513, U+1F53E-1F54A, U+1F54F-1F5FA, U+1F610, U+1F650-1F67F, U+1F687, U+1F68D, U+1F691, U+1F694, U+1F698, U+1F6AD, U+1F6B2, U+1F6B9-1F6BA, U+1F6BC, U+1F6C6-1F6CF, U+1F6D3-1F6D7, U+1F6E0-1F6EA, U+1F6F0-1F6F3, U+1F6F7-1F6FC, U+1F700-1F7FF, U+1F800-1F80B, U+1F810-1F847, U+1F850-1F859, U+1F860-1F887, U+1F890-1F8AD, U+1F8B0-1F8BB, U+1F8C0-1F8C1, U+1F900-1F90B, U+1F93B, U+1F946, U+1F984, U+1F996, U+1F9E9, U+1FA00-1FA6F, U+1FA70-1FA7C, U+1FA80-1FA89, U+1FA8F-1FAC6, U+1FACE-1FADC, U+1FADF-1FAE9, U+1FAF0-1FAF8, U+1FB00-1FBFF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVmbiArmlw.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVmaiArmlw.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: block;
+  src: url(https://design.penpot.app/internal/gfonts/font/roboto/v47/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWub2bVmUiAo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  min-width: 100%;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.text-node { background-clip: text !important; -webkit-background-clip: text !important; }
+
+/* Checks, Radios & Switch */
+.checks-ra-334c1a8fba65 {
+  position: relative;
+  width: 1920px;
+  height: 1266px;
+  background: #FFFFFFFF;
+  border-radius: 0px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Default radio button-1 */
+.default-ra-334c1a8fba65 {
+  position: absolute;
+  left: 435px;
+  top: 622px;
+  width: 18px;
+  height: 18px;
+  border-radius: 0px;
+}
+
+/* Default radio button */
+.default-ra-334c1a8fba65 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-1.5409932530019432e-7px,-8.50204742164351e-8px);
+}
+.default-ra-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+/* Disabled radio button */
+.disabled-r-334c1a8fba65 {
+  position: absolute;
+  left: 434px;
+  top: 713px;
+  width: 18px;
+  height: 18px;
+  border-radius: 0px;
+}
+
+/* Circle-5 */
+.circle5-334c1a8fba65 {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  background: #ebedefFF;
+  border-radius: 50%;
+}
+
+/* Circle-4 */
+.circle4-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  background: #321fdb66;
+  border-radius: 50%;
+}
+
+/* Checked radio button */
+.checked-ra-334c1a8fba65 {
+  position: absolute;
+  left: 434px;
+  top: 666px;
+  width: 18px;
+  height: 18px;
+  border-radius: 0px;
+}
+
+/* Circle-2 */
+.circle2-334c1a8fba65 {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  background: #ebedefFF;
+  border-radius: 50%;
+}
+
+/* Circle-1 */
+.circle1-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  background: #321fdbFF;
+  border-radius: 50%;
+}
+
+/* Disabled checkbox */
+.disabled-c-334c1a8fba65 {
+  position: absolute;
+  left: 434px;
+  top: 484px;
+  width: 18px;
+  height: 18px;
+  border-radius: 0px;
+}
+
+/* check-1 */
+.check1-334c1a8fba65 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-4.547473508864641e-13px,0px);
+}
+.check1-334c1a8fba65 {
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  width: 10px;
+  height: 7.96px;
+}
+
+/* check-2 */
+.check2-334c1a8fba65 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(0px,0px);
+}
+.check2-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0.02px;
+  width: 9.98px;
+  height: 7.93px;
+}
+
+/* base-background-2 */
+.basebackg-334c1a8fba65 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(0px,2.2737367544323206e-13px);
+}
+.basebackg-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 10px;
+  height: 7.96px;
+  display: none;
+}
+
+/* Rect-12 */
+.rect12-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  background: #321fdb66;
+  border-radius: 5px;
+}
+
+/* Checked active checkbox */
+.checked-ac-334c1a8fba65 {
+  position: absolute;
+  left: 434px;
+  top: 438px;
+  width: 18px;
+  height: 18px;
+  border-radius: 0px;
+}
+
+/* check-3 */
+.check3-334c1a8fba65 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-4.547473508864641e-13px,0px);
+}
+.check3-334c1a8fba65 {
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  width: 10px;
+  height: 7.96px;
+}
+
+/* check-4 */
+.check4-334c1a8fba65 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(0px,0px);
+}
+.check4-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0.02px;
+  width: 9.98px;
+  height: 7.93px;
+}
+
+/* base-background-3 */
+.basebackg-334c1a8fba65 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(0px,2.2737367544323206e-13px);
+}
+.basebackg-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 10px;
+  height: 7.96px;
+  display: none;
+}
+
+/* Rect-13 */
+.rect13-334c1a8fba65 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-9.478389983996749e-8px,-4.214700766169699e-7px);
+}
+.rect13-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+}
+
+/* Checked checkbox */
+.checked-ch-334c1a8fba65 {
+  position: absolute;
+  left: 434px;
+  top: 392px;
+  width: 18px;
+  height: 18px;
+  border-radius: 0px;
+}
+
+/* check */
+.check-334c1a8fba65 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-4.547473508864641e-13px,0px);
+}
+.check-334c1a8fba65 {
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  width: 10px;
+  height: 7.96px;
+}
+
+/* check */
+.check-334c1a8fba65 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(0px,0px);
+}
+.check-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0.02px;
+  width: 9.98px;
+  height: 7.93px;
+}
+
+/* base-background */
+.basebackg-334c1a8fba65 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(0px,2.2737367544323206e-13px);
+}
+.basebackg-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 10px;
+  height: 7.96px;
+  display: none;
+}
+
+/* Rect-11 */
+.rect11-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  background: #321fdbFF;
+  border-radius: 5px;
+}
+
+/* Default checkbox-1 */
+.default-ch-334c1a8fba65 {
+  position: absolute;
+  left: 434px;
+  top: 348px;
+  width: 18px;
+  height: 18px;
+  border-radius: 0px;
+}
+
+/* Default checkbox */
+.default-ch-334c1a8fba65 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-9.478389983996749e-8px,-4.2146996293013217e-7px);
+}
+.default-ch-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+}
+
+/* Switch on */
+.switch-on-334c1a8fba65 {
+  position: absolute;
+  left: 435px;
+  top: 893px;
+  width: 32px;
+  height: 18px;
+  border-radius: 0px;
+}
+
+/* Circle-9 */
+.circle9-334c1a8fba65 {
+  position: absolute;
+  left: 16px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  background: #ebedefFF;
+  border-radius: 50%;
+}
+
+/* Rect-15 */
+.rect15-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 32px;
+  height: 18px;
+  background: #321fdbFF;
+  border-radius: 16px;
+}
+
+/* Switch off */
+.switch-off-334c1a8fba65 {
+  position: absolute;
+  left: 435px;
+  top: 849px;
+  width: 32px;
+  height: 18px;
+  border-radius: 0px;
+}
+
+/* Circle-8 */
+.circle8-334c1a8fba65 {
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  background: #ebedefFF;
+  border-radius: 50%;
+}
+
+/* Rect-14 */
+.rect14-334c1a8fba65 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(-6.330537871690467e-8px,-6.876305178593611e-7px);
+}
+.rect14-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 32px;
+  height: 18px;
+  border-radius: 16px;
+}
+
+/* Header-4 */
+.header4-334c1a8fba65 {
+  position: absolute;
+  left: 360px;
+  top: 0px;
+  width: 1560px;
+  height: 190.01px;
+  border-radius: 0px;
+}
+
+/* Path-1 */
+.path1-334c1a8fba65 > svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: translate(0px,0px);
+}
+.path1-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 190px;
+  width: 1560px;
+  height: 0.01px;
+}
+
+/* Text-2 */
+.text2-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 102px;
+  width: 609px;
+  height: 69px;
+}
+.text2-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text2-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text2-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.text2-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 56px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Text-1 */
+.text1-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 64px;
+  width: 140px;
+  height: 22px;
+}
+.text1-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text1-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text1-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.text1-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+}
+
+/* Rect-1 */
+.rect1-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1560px;
+  height: 190px;
+  background: #ffffffFF;
+  border-radius: 0px;
+}
+
+/* Left Menu-4 */
+.left-menu-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: -22px;
+  width: 360px;
+  height: 1285px;
+  border-radius: 0px;
+}
+
+/* CoreUI Logo-1 */
+.core-ui-log-334c1a8fba65 {
+  position: absolute;
+  left: 27px;
+  top: 0px;
+  width: 305px;
+  height: 232px;
+  border-radius: 0px;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 413px;
+  width: 47px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 47px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 369px;
+  width: 123px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 123px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 325px;
+  width: 58px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 58px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 566px;
+  width: 47px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 47px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 719px;
+  width: 168px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 168px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(50, 31, 219, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(50, 31, 219, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 960px;
+  width: 34px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 34px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 1224px;
+  width: 48px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 48px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 1180px;
+  width: 64px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 64px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 1136px;
+  width: 77px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 77px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 1092px;
+  width: 89px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 89px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 1048px;
+  width: 53px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 53px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 1004px;
+  width: 73px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 73px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 916px;
+  width: 55px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 55px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  min-width: 100%;
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: break-spaces;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 872px;
+  width: 55px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 55px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 828px;
+  width: 43px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 43px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 675px;
+  width: 66px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 66px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 522px;
+  width: 84px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 84px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-1 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 281px;
+  width: 30px;
+  height: 20px;
+  border-radius: 0px;
+}
+
+/* Text Button */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 30px;
+  height: 20px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 16px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-20 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 779px;
+  width: 114px;
+  height: 25px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(50, 31, 219, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 20px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(50, 31, 219, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-14 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 626px;
+  width: 57px;
+  height: 25px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(50, 31, 219, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 20px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(50, 31, 219, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-6 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 473px;
+  width: 71px;
+  height: 25px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(50, 31, 219, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 20px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(50, 31, 219, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Text Button-2 */
+.text-butto-334c1a8fba65 {
+  position: absolute;
+  left: 80px;
+  top: 232px;
+  width: 151px;
+  height: 25px;
+}
+.text-butto-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: center;
+}
+.text-butto-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(50, 31, 219, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 20px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(50, 31, 219, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+}
+
+/* Rect-3 */
+.rect3-334c1a8fba65 {
+  position: absolute;
+  left: 0px;
+  top: 21px;
+  width: 360px;
+  height: 1264px;
+  background: #f0f4f7FF;
+  border-radius: 0px;
+}
+
+/* Text-76 */
+.text76-334c1a8fba65 {
+  position: absolute;
+  left: 434px;
+  top: 771px;
+  width: 166px;
+  height: 52px;
+}
+.text76-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text76-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  min-width: 100%;
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text76-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.text76-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: break-spaces;
+  font-size: 42px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Text-75 */
+.text75-334c1a8fba65 {
+  position: absolute;
+  left: 434px;
+  top: 544px;
+  width: 128px;
+  height: 52px;
+}
+.text75-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text75-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text75-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.text75-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 42px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Text-79 */
+.text79-334c1a8fba65 {
+  position: absolute;
+  left: 468px;
+  top: 436px;
+  width: 202px;
+  height: 22px;
+}
+.text79-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text79-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text79-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.text79-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Text-80 */
+.text80-334c1a8fba65 {
+  position: absolute;
+  left: 468px;
+  top: 482px;
+  width: 150px;
+  height: 22px;
+}
+.text80-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text80-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text80-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.text80-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Text-82 */
+.text82-334c1a8fba65 {
+  position: absolute;
+  left: 468px;
+  top: 712px;
+  width: 170px;
+  height: 22px;
+}
+.text82-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text82-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text82-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.text82-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Text-81 */
+.text81-334c1a8fba65 {
+  position: absolute;
+  left: 468px;
+  top: 664px;
+  width: 170px;
+  height: 22px;
+}
+.text81-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text81-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text81-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.text81-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Text-84 */
+.text84-334c1a8fba65 {
+  position: absolute;
+  left: 483px;
+  top: 891px;
+  width: 78px;
+  height: 22px;
+}
+.text84-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text84-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text84-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.text84-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Text-83 */
+.text83-334c1a8fba65 {
+  position: absolute;
+  left: 483px;
+  top: 847px;
+  width: 81px;
+  height: 22px;
+}
+.text83-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text83-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text83-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.text83-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Text-77 */
+.text77-334c1a8fba65 {
+  position: absolute;
+  left: 469px;
+  top: 620px;
+  width: 159px;
+  height: 22px;
+}
+.text77-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text77-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text77-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.text77-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Text-78 */
+.text78-334c1a8fba65 {
+  position: absolute;
+  left: 468px;
+  top: 390px;
+  width: 150px;
+  height: 22px;
+}
+.text78-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text78-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text78-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.text78-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 18px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Text-74 */
+.text74-334c1a8fba65 {
+  position: absolute;
+  left: 434px;
+  top: 270px;
+  width: 138px;
+  height: 52px;
+}
+.text74-334c1a8fba65 .root-0 {
+  
+  
+  display: flex;
+  white-space: break-spaces;
+  align-items: flex-start;
+}
+.text74-334c1a8fba65 .root-0-paragraph-set-0 {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: inherit;
+  
+  margin-right: 1px;
+  vertical-align: top;
+}
+.text74-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0 {
+  font-size: 0;
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;
+}
+.text74-334c1a8fba65 .root-0-paragraph-set-0-paragraph-0-text-0 {
+  color: rgba(55, 66, 84, 1);
+  text-transform: none;
+  
+  line-break: auto;
+  overflow-wrap: initial;
+  white-space: pre;
+  font-size: 42px;
+  text-rendering: geometricPrecision;
+  caret-color: rgba(55, 66, 84, 1);
+  text-decoration: none;
+  letter-spacing: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+}
+    </style>
+  </head>
+  <body>
+  <!-- frame: Checks, Radios & Switch -->
+<div class="frame checks-ra-334c1a8fba65">
+  <!-- text: Text-74 -->
+  <div class="shape text text74-334c1a8fba65">
+    <div class="text-node-html" id="html-text-node-aa4e5821-419f-11ed-ae8d-334c1a8fba65" data-x="2631.0000004694202" data-y="557.0000013622616">
+      <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+        <div class="paragraph-set root-0-paragraph-set-0">
+          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:42px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:400">Checks</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- text: Text-78 -->
+  <div class="shape text text78-334c1a8fba65">
+    <div class="text-node-html" id="html-text-node-a19b72a0-41a2-11ed-ae8d-334c1a8fba65" data-x="2665.000001354737" data-y="677.0000026800616">
+      <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+        <div class="paragraph-set root-0-paragraph-set-0">
+          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:400">Checked checkbox</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- text: Text-77 -->
+  <div class="shape text text77-334c1a8fba65">
+    <div class="text-node-html" id="html-text-node-92237ca0-41a2-11ed-ae8d-334c1a8fba65" data-x="2666.000001342695" data-y="907.0000029113678">
+      <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+        <div class="paragraph-set root-0-paragraph-set-0">
+          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:400">Default radio button</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- text: Text-83 -->
+  <div class="shape text text83-334c1a8fba65">
+    <div class="text-node-html" id="html-text-node-064cbb00-41a3-11ed-ae8d-334c1a8fba65" data-x="2680.0000014055227" data-y="1134.000000915754">
+      <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+        <div class="paragraph-set root-0-paragraph-set-0">
+          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:400">Switch off</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- text: Text-84 -->
+  <div class="shape text text84-334c1a8fba65">
+    <div class="text-node-html" id="html-text-node-0c84ae10-41a3-11ed-ae8d-334c1a8fba65" data-x="2680.0000014031657" data-y="1178.0000008886323">
+      <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+        <div class="paragraph-set root-0-paragraph-set-0">
+          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:400">Switch on</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- text: Text-81 -->
+  <div class="shape text text81-334c1a8fba65">
+    <div class="text-node-html" id="html-text-node-fd6b79e0-41a2-11ed-ae8d-334c1a8fba65" data-x="2665.000001331447" data-y="951.0000031940756">
+      <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+        <div class="paragraph-set root-0-paragraph-set-0">
+          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:400">Checked radio button</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- text: Text-82 -->
+  <div class="shape text text82-334c1a8fba65">
+    <div class="text-node-html" id="html-text-node-01b112d0-41a3-11ed-ae8d-334c1a8fba65" data-x="2665.000001331447" data-y="999.0000031940756">
+      <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+        <div class="paragraph-set root-0-paragraph-set-0">
+          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:400">Disabled radio button</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- text: Text-80 -->
+  <div class="shape text text80-334c1a8fba65">
+    <div class="text-node-html" id="html-text-node-b0fecf30-41a2-11ed-ae8d-334c1a8fba65" data-x="2665.000001354737" data-y="769.0000026800616">
+      <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+        <div class="paragraph-set root-0-paragraph-set-0">
+          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:400">Disabled checkbox</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- text: Text-79 -->
+  <div class="shape text text79-334c1a8fba65">
+    <div class="text-node-html" id="html-text-node-a966d6f0-41a2-11ed-ae8d-334c1a8fba65" data-x="2665.000001294993" data-y="723.0000040164982">
+      <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+        <div class="paragraph-set root-0-paragraph-set-0">
+          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:400">Checked active checkbox</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- text: Text-75 -->
+  <div class="shape text text75-334c1a8fba65">
+    <div class="text-node-html" id="html-text-node-8190a0c0-41a2-11ed-ae8d-334c1a8fba65" data-x="2631.000000486357" data-y="831.0000013494787">
+      <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+        <div class="paragraph-set root-0-paragraph-set-0">
+          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:42px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:400">Radios</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- text: Text-76 -->
+  <div class="shape text text76-334c1a8fba65">
+    <div class="text-node-html" id="html-text-node-85768d80-41a2-11ed-ae8d-334c1a8fba65" data-x="2631.000000498538" data-y="1058.000001833895">
+      <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+        <div class="paragraph-set root-0-paragraph-set-0">
+          <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:42px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:400">Switches</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- frame: Left Menu-4 -->
+  <div class="frame left-menu-334c1a8fba65">
+    <!-- rect: Rect-3 -->
+    <div class="shape rect rect3-334c1a8fba65">
+    </div>
+    <!-- text: Text Button-2 -->
+    <div class="shape text text-butto-334c1a8fba65">
+      <div class="text-node-html" id="html-text-node-aa4e7f4a-419f-11ed-ae8d-334c1a8fba65" data-x="2276.99998507484" data-y="497.0000005989382">
+        <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+          <div class="paragraph-set root-0-paragraph-set-0">
+            <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(50, 31, 219, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:20px;text-rendering:geometricPrecision;caret-color:rgba(50, 31, 219, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#321fdb&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~u7e6fa090-4174-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Layout &amp; Utilities</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- text: Text Button-6 -->
+    <div class="shape text text-butto-334c1a8fba65">
+      <div class="text-node-html" id="html-text-node-aa4e7f4b-419f-11ed-ae8d-334c1a8fba65" data-x="2276.999985074317" data-y="738.0000002783431">
+        <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+          <div class="paragraph-set root-0-paragraph-set-0">
+            <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(50, 31, 219, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:20px;text-rendering:geometricPrecision;caret-color:rgba(50, 31, 219, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#321fdb&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~u7e6fa090-4174-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Content</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- text: Text Button-14 -->
+    <div class="shape text text-butto-334c1a8fba65">
+      <div class="text-node-html" id="html-text-node-aa4e7f4c-419f-11ed-ae8d-334c1a8fba65" data-x="2276.9999851106195" data-y="891.0000003265473">
+        <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+          <div class="paragraph-set root-0-paragraph-set-0">
+            <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(50, 31, 219, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:20px;text-rendering:geometricPrecision;caret-color:rgba(50, 31, 219, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#321fdb&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~u7e6fa090-4174-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Forms</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- text: Text Button-20 -->
+    <div class="shape text text-butto-334c1a8fba65">
+      <div class="text-node-html" id="html-text-node-aa4e7f4d-419f-11ed-ae8d-334c1a8fba65" data-x="2276.99998514472" data-y="1044.0000007308806">
+        <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+          <div class="paragraph-set root-0-paragraph-set-0">
+            <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(50, 31, 219, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:20px;text-rendering:geometricPrecision;caret-color:rgba(50, 31, 219, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#321fdb&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~u7e6fa090-4174-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Components</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f61-419f-11ed-ae8d-334c1a8fba65" data-x="2276.9999849513915" data-y="546.0000002011658">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Grid</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f62-419f-11ed-ae8d-334c1a8fba65" data-x="2276.999985041532" data-y="787.0000006984745">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Typography</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f63-419f-11ed-ae8d-334c1a8fba65" data-x="2276.9999850377" data-y="940.0000005327049">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Overview</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f64-419f-11ed-ae8d-334c1a8fba65" data-x="2276.9999850297672" data-y="1093.0000003208881">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Alerts</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f65-419f-11ed-ae8d-334c1a8fba65" data-x="2276.999985039517" data-y="1137.0000004314045">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Avatars</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f66-419f-11ed-ae8d-334c1a8fba65" data-x="2276.999985039517" data-y="1181.0000004314043">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:break-spaces;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Buttons</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f67-419f-11ed-ae8d-334c1a8fba65" data-x="2276.9999850484564" data-y="1269.0000005971742">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Dropdown</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f68-419f-11ed-ae8d-334c1a8fba65" data-x="2276.9999850836434" data-y="1313.0000005619972">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Modals</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f69-419f-11ed-ae8d-334c1a8fba65" data-x="2276.9999850647027" data-y="1357.000000893537">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Navs &amp; Tabs</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f6a-419f-11ed-ae8d-334c1a8fba65" data-x="2276.999985066942" data-y="1401.000000783024">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Pagination</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f6b-419f-11ed-ae8d-334c1a8fba65" data-x="2276.999985045024" data-y="1445.0000005664433">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Progress</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f6c-419f-11ed-ae8d-334c1a8fba65" data-x="2276.999985058661" data-y="1489.0000004684707">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Toasts</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f6d-419f-11ed-ae8d-334c1a8fba65" data-x="2276.999985029088" data-y="1225.0000002380066">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Card</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f6e-419f-11ed-ae8d-334c1a8fba65" data-x="2276.999985071843" data-y="984.0000014075513">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(50, 31, 219, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(50, 31, 219, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#321fdb&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~u7e6fa090-4174-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Checks, Radio &amp; Switch</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f6f-419f-11ed-ae8d-334c1a8fba65" data-x="2276.9999850336544" data-y="831.0000003577265">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Tables</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f70-419f-11ed-ae8d-334c1a8fba65" data-x="2276.9999849981314" data-y="590.0000004590296">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Spacing</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f71-419f-11ed-ae8d-334c1a8fba65" data-x="2276.9999850271597" data-y="634.0000010576422">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Border &amp; Shadow</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- frame: Text Button-1 -->
+    <div class="frame text-butto-334c1a8fba65">
+      <!-- text: Text Button -->
+      <div class="shape text text-butto-334c1a8fba65">
+        <div class="text-node-html" id="html-text-node-aa4e7f72-419f-11ed-ae8d-334c1a8fba65" data-x="2276.9999851049206" data-y="678.0000001669168">
+          <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="paragraph-set root-0-paragraph-set-0">
+              <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:16px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:500">Colors</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- image: CoreUI Logo-1 -->
+    <img src="data:image/png;base64,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" class="shape image core-ui-log-334c1a8fba65">
+    </img>
+  </div>
+  <!-- frame: Header-4 -->
+  <div class="frame header4-334c1a8fba65">
+    <!-- rect: Rect-1 -->
+    <div class="shape rect rect1-334c1a8fba65">
+    </div>
+    <!-- text: Text-1 -->
+    <div class="shape text text1-334c1a8fba65">
+      <div class="text-node-html" id="html-text-node-aa4e7f74-419f-11ed-ae8d-334c1a8fba65" data-x="2636.999984948227" data-y="351.00000004191725">
+        <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+          <div class="paragraph-set root-0-paragraph-set-0">
+            <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:18px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:300">CoreUI Penpot Kit</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- text: Text-2 -->
+    <div class="shape text text2-334c1a8fba65">
+      <div class="text-node-html" id="html-text-node-aa4e7f75-419f-11ed-ae8d-334c1a8fba65" data-x="2636.999985079258" data-y="389.0000014863933">
+        <div class="root rich-text root-0" style="display:flex;white-space:break-spaces;align-items:flex-start" xmlns="http://www.w3.org/1999/xhtml">
+          <div class="paragraph-set root-0-paragraph-set-0">
+            <p class="paragraph root-0-paragraph-set-0-paragraph-0" dir="auto"><span class="text-node root-0-paragraph-set-0-paragraph-0-text-0" style="color:rgba(55, 66, 84, 1);text-transform:none;line-break:auto;overflow-wrap:initial;white-space:pre;font-size:56px;text-rendering:geometricPrecision;caret-color:rgba(55, 66, 84, 1);text-decoration:none;--font-id:gfont-roboto;--fills:[[&quot;^ &quot;,&quot;~:fill-color&quot;,&quot;#374254&quot;,&quot;~:fill-color-ref-id&quot;,&quot;~ua5965580-4177-11ed-9fdb-7d98be13e686&quot;,&quot;~:fill-color-ref-file&quot;,&quot;~u13e45124-73b4-8140-8006-2f47ad8ec44f&quot;,&quot;~:fill-opacity&quot;,1]];letter-spacing:0px;font-family:&quot;Roboto&quot;;font-style:normal;font-weight:400">Checks, Radios &amp; Switch</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- path: Path-1 -->
+    <div class="shape path path1-334c1a8fba65">
+      <svg width="1566" xmlns="http://www.w3.org/2000/svg" height="6.01" id="screenshot-aa4e7f76-419f-11ed-ae8d-334c1a8fba65" viewBox="2554 474 1566 6.01" style="-webkit-print-color-adjust::exact" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
+        <g id="shape-aa4e7f76-419f-11ed-ae8d-334c1a8fba65">
+          <defs></defs>
+          <g class="fills" id="fills-aa4e7f76-419f-11ed-ae8d-334c1a8fba65">
+            <path d="M2557.000,477.000C4089.494,477.000,4117.000,477.000,4117.000,477.000" style="fill:#374254;fill-opacity:1"></path>
+          </g>
+          <g id="strokes-af38f7d0-eb99-80e0-8006-2f47cf4473b0-aa4e7f76-419f-11ed-ae8d-334c1a8fba65" class="strokes">
+            <g class="stroke-shape">
+              <defs></defs>
+              <path d="M2557.000,477.000C4089.494,477.000,4117.000,477.000,4117.000,477.000" style="fill:none;fill-opacity:none;stroke-width:2;stroke:#374254;stroke-opacity:1"></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <!-- frame: Switch off -->
+  <div class="frame switch-off-334c1a8fba65">
+    <!-- rect: Rect-14 -->
+    <div class="shape rect rect14-334c1a8fba65">
+      <svg width="34" xmlns="http://www.w3.org/2000/svg" height="20" id="screenshot-38afb4e0-41a2-11ed-ae8d-334c1a8fba65" viewBox="2631 1135 34 20" style="-webkit-print-color-adjust::exact" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
+        <g id="shape-38afb4e0-41a2-11ed-ae8d-334c1a8fba65">
+          <defs></defs>
+          <g class="fills" id="fills-38afb4e0-41a2-11ed-ae8d-334c1a8fba65">
+            <rect rx="8.999999066613213" ry="8.999999066613213" x="2632.0000000633054" y="1136.0000006876305" transform="matrix(1.000000, -0.000000, -0.000000, 1.000000, 0.000011, 0.000107)" width="31.99999985617433" height="17.999998133226427" style="fill:#ffffff;fill-opacity:1"></rect>
+          </g>
+          <g id="strokes-af38f7d0-eb99-80e0-8006-2f47cf44a36e-38afb4e0-41a2-11ed-ae8d-334c1a8fba65" class="strokes">
+            <g class="stroke-shape">
+              <defs></defs>
+              <rect rx="8.999999066613213" ry="8.999999066613213" x="2632.0000000633054" y="1136.0000006876305" transform="matrix(1.000000, -0.000000, -0.000000, 1.000000, 0.000011, 0.000107)" width="31.99999985617433" height="17.999998133226427" style="fill:none;fill-opacity:none;stroke-width:1;stroke:#9da5b1;stroke-opacity:1"></rect>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <!-- circle: Circle-8 -->
+    <div class="shape circle circle8-334c1a8fba65">
+    </div>
+  </div>
+  <!-- frame: Switch on -->
+  <div class="frame switch-on-334c1a8fba65">
+    <!-- rect: Rect-15 -->
+    <div class="shape rect rect15-334c1a8fba65">
+    </div>
+    <!-- circle: Circle-9 -->
+    <div class="shape circle circle9-334c1a8fba65">
+    </div>
+  </div>
+  <!-- frame: Default checkbox-1 -->
+  <div class="frame default-ch-334c1a8fba65">
+    <!-- rect: Default checkbox -->
+    <div class="shape rect default-ch-334c1a8fba65">
+      <svg width="20" xmlns="http://www.w3.org/2000/svg" height="20" id="screenshot-0f6a4931-41a0-11ed-ae8d-334c1a8fba65" viewBox="2630 634 20 20" style="-webkit-print-color-adjust::exact" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
+        <g id="shape-0f6a4931-41a0-11ed-ae8d-334c1a8fba65">
+          <defs></defs>
+          <g class="fills" id="fills-0f6a4931-41a0-11ed-ae8d-334c1a8fba65">
+            <rect rx="5" ry="5" x="2631.000000094784" y="635.00000042147" transform="matrix(1.000000, -0.000000, -0.000000, 1.000000, 0.000007, 0.000123)" width="17.99999954700479" height="17.99999961778508" style="fill:#ffffff;fill-opacity:1"></rect>
+          </g>
+          <g id="strokes-af38f7d0-eb99-80e0-8006-2f47cf44a36f-0f6a4931-41a0-11ed-ae8d-334c1a8fba65" class="strokes">
+            <g class="stroke-shape">
+              <defs></defs>
+              <rect rx="5" ry="5" x="2631.000000094784" y="635.00000042147" transform="matrix(1.000000, -0.000000, -0.000000, 1.000000, 0.000007, 0.000123)" width="17.99999954700479" height="17.99999961778508" style="fill:none;fill-opacity:none;stroke-width:1;stroke:#9da5b1;stroke-opacity:1"></rect>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <!-- frame: Checked checkbox -->
+  <div class="frame checked-ch-334c1a8fba65">
+    <!-- rect: Rect-11 -->
+    <div class="shape rect rect11-334c1a8fba65">
+    </div>
+    <!-- group: check -->
+    <div class="shape group check-334c1a8fba65">
+      <svg width="10.003" xmlns="http://www.w3.org/2000/svg" height="7.957" id="screenshot-289af490-41a0-11ed-ae8d-334c1a8fba65" viewBox="2635 684 10.003 7.957" style="-webkit-print-color-adjust::exact" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
+        <g id="shape-289af490-41a0-11ed-ae8d-334c1a8fba65" style="fill:#000000" width="10" height="7.957" rx="0" ry="0">
+          <defs></defs>
+          <g id="shape-289b69c0-41a0-11ed-ae8d-334c1a8fba65" style="display:none">
+            <defs></defs>
+            <g class="fills" id="fills-289b69c0-41a0-11ed-ae8d-334c1a8fba65">
+              <rect rx="0" ry="0" x="2635.003482834742" y="683.9999999999998" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" width="10" height="7.957" fill="none" style="fill:none"></rect>
+            </g>
+          </g>
+          <g id="shape-289c7b30-41a0-11ed-ae8d-334c1a8fba65">
+            <defs></defs>
+            <g class="fills" id="fills-289c7b30-41a0-11ed-ae8d-334c1a8fba65">
+              <path d="M2643.449,684.254C2643.811,683.935,2644.357,683.949,2644.702,684.286C2645.046,684.623,2645.072,685.169,2644.761,685.537L2639.867,691.663C2639.697,691.846,2639.460,691.953,2639.210,691.957C2638.960,691.962,2638.719,691.865,2638.542,691.688L2635.296,688.437C2635.048,688.208,2634.945,687.862,2635.028,687.535C2635.111,687.207,2635.367,686.952,2635.694,686.869C2636.021,686.786,2636.368,686.889,2636.596,687.137L2639.165,689.705L2643.449,684.254ZC2643.433,684.268,2643.442,684.259,2643.449,684.254ZZ" style="fill:#ebedef;fill-opacity:1"></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <!-- frame: Checked active checkbox -->
+  <div class="frame checked-ac-334c1a8fba65">
+    <!-- rect: Rect-13 -->
+    <div class="shape rect rect13-334c1a8fba65">
+      <svg width="28" xmlns="http://www.w3.org/2000/svg" height="28" id="screenshot-465d3601-41a0-11ed-ae8d-334c1a8fba65" viewBox="2626 720 28 28" style="-webkit-print-color-adjust::exact" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
+        <g id="shape-465d3601-41a0-11ed-ae8d-334c1a8fba65">
+          <defs></defs>
+          <g class="fills" id="fills-465d3601-41a0-11ed-ae8d-334c1a8fba65">
+            <rect rx="5" ry="5" x="2631.000000094784" y="725.0000004214701" transform="matrix(1.000000, -0.000000, -0.000000, 1.000000, 0.000008, 0.000123)" width="17.99999954700479" height="17.99999961778508" style="fill:#321fdb;fill-opacity:1"></rect>
+          </g>
+          <g id="strokes-af38f7d0-eb99-80e0-8006-2f47cf44f961-465d3601-41a0-11ed-ae8d-334c1a8fba65" class="strokes">
+            <g class="outer-stroke-shape">
+              <defs>
+                <mask id="outer-stroke-render-1412-465d3601-41a0-11ed-ae8d-334c1a8fba65-0" x="2626.757359312881" y="720.7573593128807" width="26.485281110810703" height="26.485281834963573" maskUnits="userSpaceOnUse">
+                  <use href="#stroke-shape-render-1412-465d3601-41a0-11ed-ae8d-334c1a8fba65-0" style="fill:none;stroke:white;stroke-width:6"></use>
+                  <use href="#stroke-shape-render-1412-465d3601-41a0-11ed-ae8d-334c1a8fba65-0" style="fill:black;stroke:none"></use>
+                </mask>
+                <rect rx="5" ry="5" x="2631.000000094784" y="725.0000004214701" transform="matrix(1.000000, -0.000000, -0.000000, 1.000000, 0.000008, 0.000123)" width="17.99999954700479" height="17.99999961778508" id="stroke-shape-render-1412-465d3601-41a0-11ed-ae8d-334c1a8fba65-0"></rect>
+              </defs>
+              <use href="#stroke-shape-render-1412-465d3601-41a0-11ed-ae8d-334c1a8fba65-0" mask="url(#outer-stroke-render-1412-465d3601-41a0-11ed-ae8d-334c1a8fba65-0)" style="fill:none;stroke-width:6;stroke:#e2d8f3;stroke-opacity:1"></use>
+              <use href="#stroke-shape-render-1412-465d3601-41a0-11ed-ae8d-334c1a8fba65-0" style="fill:none;fill-opacity:none;stroke-width:3;stroke:none;stroke-opacity:1"></use>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+    <!-- group: check-3 -->
+    <div class="shape group check3-334c1a8fba65">
+      <svg width="10.003" xmlns="http://www.w3.org/2000/svg" height="7.957" id="screenshot-465d3602-41a0-11ed-ae8d-334c1a8fba65" viewBox="2635 730 10.003 7.957" style="-webkit-print-color-adjust::exact" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
+        <g id="shape-465d3602-41a0-11ed-ae8d-334c1a8fba65" style="fill:#000000" width="10" height="7.957" rx="0" ry="0">
+          <defs></defs>
+          <g id="shape-465d3603-41a0-11ed-ae8d-334c1a8fba65" style="display:none">
+            <defs></defs>
+            <g class="fills" id="fills-465d3603-41a0-11ed-ae8d-334c1a8fba65">
+              <rect rx="0" ry="0" x="2635.003482834742" y="729.9999999999998" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" width="10" height="7.957" fill="none" style="fill:none"></rect>
+            </g>
+          </g>
+          <g id="shape-465d3604-41a0-11ed-ae8d-334c1a8fba65">
+            <defs></defs>
+            <g class="fills" id="fills-465d3604-41a0-11ed-ae8d-334c1a8fba65">
+              <path d="M2643.449,730.254C2643.811,729.935,2644.357,729.949,2644.702,730.286C2645.046,730.623,2645.072,731.169,2644.761,731.537L2639.867,737.663C2639.697,737.846,2639.460,737.953,2639.210,737.957C2638.960,737.962,2638.719,737.865,2638.542,737.688L2635.296,734.437C2635.048,734.208,2634.945,733.862,2635.028,733.535C2635.111,733.207,2635.367,732.952,2635.694,732.869C2636.021,732.786,2636.368,732.889,2636.596,733.137L2639.165,735.705L2643.449,730.254ZC2643.433,730.268,2643.442,730.259,2643.449,730.254ZZ" style="fill:#ebedef;fill-opacity:1"></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <!-- frame: Disabled checkbox -->
+  <div class="frame disabled-c-334c1a8fba65">
+    <!-- rect: Rect-12 -->
+    <div class="shape rect rect12-334c1a8fba65">
+    </div>
+    <!-- group: check-1 -->
+    <div class="shape group check1-334c1a8fba65">
+      <svg width="10.003" xmlns="http://www.w3.org/2000/svg" height="7.957" id="screenshot-358317f2-41a0-11ed-ae8d-334c1a8fba65" viewBox="2635 776 10.003 7.957" style="-webkit-print-color-adjust::exact" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
+        <g id="shape-358317f2-41a0-11ed-ae8d-334c1a8fba65" style="fill:#000000" width="10" height="7.957" rx="0" ry="0">
+          <defs></defs>
+          <g id="shape-358317f3-41a0-11ed-ae8d-334c1a8fba65" style="display:none">
+            <defs></defs>
+            <g class="fills" id="fills-358317f3-41a0-11ed-ae8d-334c1a8fba65">
+              <rect rx="0" ry="0" x="2635.003482834742" y="775.9999999999998" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, 0.000000, 0.000000)" width="10" height="7.957" fill="none" style="fill:none"></rect>
+            </g>
+          </g>
+          <g id="shape-358317f4-41a0-11ed-ae8d-334c1a8fba65">
+            <defs></defs>
+            <g class="fills" id="fills-358317f4-41a0-11ed-ae8d-334c1a8fba65">
+              <path d="M2643.449,776.254C2643.811,775.935,2644.357,775.949,2644.702,776.286C2645.046,776.623,2645.072,777.169,2644.761,777.537L2639.867,783.663C2639.697,783.846,2639.460,783.953,2639.210,783.957C2638.960,783.962,2638.719,783.865,2638.542,783.688L2635.296,780.437C2635.048,780.208,2634.945,779.862,2635.028,779.535C2635.111,779.207,2635.367,778.952,2635.694,778.869C2636.021,778.786,2636.368,778.889,2636.596,779.137L2639.165,781.705L2643.449,776.254ZC2643.433,776.268,2643.442,776.259,2643.449,776.254ZZ" style="fill:#ebedef;fill-opacity:1"></path>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+  <!-- frame: Checked radio button -->
+  <div class="frame checked-ra-334c1a8fba65">
+    <!-- circle: Circle-1 -->
+    <div class="shape circle circle1-334c1a8fba65">
+    </div>
+    <!-- circle: Circle-2 -->
+    <div class="shape circle circle2-334c1a8fba65">
+    </div>
+  </div>
+  <!-- frame: Disabled radio button -->
+  <div class="frame disabled-r-334c1a8fba65">
+    <!-- circle: Circle-4 -->
+    <div class="shape circle circle4-334c1a8fba65">
+    </div>
+    <!-- circle: Circle-5 -->
+    <div class="shape circle circle5-334c1a8fba65">
+    </div>
+  </div>
+  <!-- frame: Default radio button-1 -->
+  <div class="frame default-ra-334c1a8fba65">
+    <!-- circle: Default radio button -->
+    <div class="shape circle default-ra-334c1a8fba65">
+      <svg width="20" xmlns="http://www.w3.org/2000/svg" height="20" id="screenshot-03ce9110-41a2-11ed-ae8d-334c1a8fba65" viewBox="2631 908 20 20" style="-webkit-print-color-adjust::exact" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" version="1.1">
+        <g id="shape-03ce9110-41a2-11ed-ae8d-334c1a8fba65">
+          <defs></defs>
+          <g class="fills" id="fills-03ce9110-41a2-11ed-ae8d-334c1a8fba65">
+            <ellipse cx="2641" cy="918.0000000000001" rx="8.999999845900676" ry="8.999999914979641" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, -0.000024, -0.000000)" style="fill:#ffffff;fill-opacity:1"></ellipse>
+          </g>
+          <g id="strokes-af38f7d0-eb99-80e0-8006-2f47cf45055d-03ce9110-41a2-11ed-ae8d-334c1a8fba65" class="strokes">
+            <g class="stroke-shape">
+              <defs></defs>
+              <ellipse cx="2641" cy="918.0000000000001" rx="8.999999845900676" ry="8.999999914979641" transform="matrix(1.000000, 0.000000, 0.000000, 1.000000, -0.000024, -0.000000)" style="fill:none;fill-opacity:none;stroke-width:1;stroke:#9da5b1;stroke-opacity:1"></ellipse>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+  </body>
+</html>

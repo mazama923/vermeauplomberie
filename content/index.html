@@ -1,4 +1,161 @@
 <!DOCTYPE html>
 <html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verm'eau Plomberie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #f6f6f6;
+      color: #1b1b1b;
+    }
+    .hero {
+      background-image: url('placeholder-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 120px 30px;
+      text-align: left;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+      max-width: 600px;
+    }
+    .hero p {
+      margin: 20px 0;
+      font-size: 1rem;
+      max-width: 600px;
+    }
+    .hero .cta {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .hero .cta a {
+      padding: 10px 20px;
+      background-color: #ff4b00;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .section {
+      padding: 60px 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    .services, .testimonials {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .service-card, .testimonial {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    .service-card img {
+      height: 60px;
+      margin-bottom: 15px;
+    }
+    .testimonial img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .testimonial .name {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .testimonial .stars {
+      color: #ff4b00;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <h1>Verm’eau Plomberie,<br>des solutions qui coulent de source !</h1>
+    <p>Des services de plomberie fiables et professionnels pour tous vos besoins domestiques.</p>
+    <div class="cta">
+      <a href="tel:0789500369">07 89 50 03 69</a>
+      <a href="mailto:vermeauplomberie@gmail.com">vermeauplomberie@gmail.com</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Votre artisan plombier du Puy-de-Dôme</h2>
+    <p>Besoin d’un plombier de confiance ? J’interviens rapidement pour garantir confort et durabilité. Qualité, réactivité et transparence sont mes priorités.</p>
+  </section>
+
+  <section class="section">
+    <h2>Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <img src="placeholder-service1.png" alt="Dépannage">
+        <h3>Dépannage</h3>
+        <p>Fuite, bouchon ou robinet défectueux ? Intervention rapide avec fiabilité.</p>
+      </div>
+      <div class="service-card">
+        <img src="placeholder-service2.png" alt="Rénovation">
+        <h3>Rénovation de salle de bains</h3>
+        <p>Une salle de bain esthétique, pratique et personnalisée.</p>
+      </div>
+      <div class="service-card">
+        <img src="placeholder-service3.png" alt="Chauffe-eau">
+        <h3>Chauffe-eau</h3>
+        <p>Installation et dépannage de chauffe-eau pour un confort optimal toute l’année.</p>
+      </div>
+      <div class="service-card">
+        <img src="placeholder-service4.png" alt="Climatisation">
+        <h3>Climatisation</h3>
+        <p>Chaleur l’hiver, fraîcheur l’été : une pompe à chaleur adaptée à vos besoins.</p>
+      </div>
+      <div class="service-card">
+        <img src="placeholder-service5.png" alt="Installation">
+        <h3>Installation de plomberie</h3>
+        <p>Travail soigné, durable et conforme à vos attentes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Témoignages</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <img src="placeholder-avatar1.jpg" alt="Bruno Randon">
+        <p>« Artisan que je conseille les yeux fermés [...] Délai tenu »</p>
+        <div class="name">Bruno Randon</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="testimonial">
+        <img src="placeholder-avatar2.jpg" alt="Sylvie Chanté">
+        <p>« Travail très soigné, respect des délais. Très satisfaits ! »</p>
+        <div class="name">Sylvie Chanté</div>
+        <div class="stars">★★★★★</div>
+      </div>
+      <div class="testimonial">
+        <img src="placeholder-avatar3.jpg" alt="Drino Ben">
+        <p>« Professionnel sympathique, ponctuel et à l’écoute. Très bon travail. »</p>
+        <div class="name">Drino Ben</div>
+        <div class="stars">★★★★★</div>
+      </div>
+    </div>
+  </section>
+</body>
 </html>
 
