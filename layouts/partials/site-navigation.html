@@ -1,7 +1,7 @@
 <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l center items-center justify-between">
+  <div class="flex flex-wrap center items-center justify-center justify-between-ns">
     {{/* Logo */}}
-    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white dib no-underline"> {{/* Changed white-90 to white */}}
+    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white dib no-underline mr3"> {{/* Added mr3 for spacing */}}
       {{ with .Site.Params.site_logo }}
         <img src="{{ urls.RelURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
       {{ else }}
@@ -12,44 +12,41 @@
     {{/* Navigation Links */}}
     <div class="flex-l items-center">
       {{ partials.Include "i18nlist.html" . }}
-      <ul class="flex {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}"> {{/* Added flex to ul for horizontal layout */}}
-        {{/* Accueil Link (Add this if you need a Home link as seen in the image) */}}
-        <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
-            <a class="hover-white white no-underline" href="{{ .Site.Home.RelPermalink }}">Accueil</a> {{/* Changed white-90 to white */}}
+      <ul class="flex flex-wrap justify-center {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
+        {{/* Accueil Link */}}
+        <li class="list f5 f4-ns fw4 dib mh2 {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl0 pr0" "pr0 pl0" }}">
+            <a class="hover-white white no-underline nav-link" href="{{ .Site.Home.RelPermalink }}">Accueil</a>
         </li>
         {{/* A Propos Link */}}
-        <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
-          <a class="hover-white white no-underline" href="/a-propos">A propos</a> {{/* Changed white-90 to white */}}
+        <li class="list f5 f4-ns fw4 dib mh2 {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl0 pr0" "pr0 pl0" }}">
+          <a class="hover-white white no-underline nav-link" href="/a-propos">A propos</a>
         </li>
 
         {{/* Services Dropdown */}}
-        {{/* Added relative class to li for positioning dropdown */}}
-        <li class="list f5 f4-ns fw4 dib relative dropdown-li {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
-          {{/* Changed from button to a tag for hover */}}
-          <a href="#" class="hover-white white no-underline" aria-haspopup="true" aria-expanded="false"> {{/* Changed white-90 to white */}}
+        <li class="list f5 f4-ns fw4 dib relative dropdown-li mh2 {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl0 pr0" "pr0 pl0" }}">
+          <a href="#" class="hover-white white no-underline" aria-haspopup="true" aria-expanded="false"> {{/* No nav-link here */}}
             Services
             {{/* Down Arrow SVG */}}
-            <svg class="ml1" width="10" height="10" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <svg class="ml1" width="10" height="10" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" style="display: inline-block; vertical-align: middle;">
               <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </a>
-          {{/* Dropdown Content - Removed 'dn' class, removed mt2, added top: 100% */}}
-          <ul id="services-dropdown" class="absolute bg-white pa2 shadow-1 dropdown-ul" style="min-width:200px; z-index:100; top: 100%;"> {{/* Changed bg-white-90 to bg-white */}}
-            <li><a class="black no-underline db pv1 ph2 hover-bg-light-gray" href="/services/depannage">Dépannage</a></li> {{/* Added hover-bg-light-gray */}}
-            <li><a class="black no-underline db pv1 ph2 hover-bg-light-gray" href="/services/renovation-salle-de-bain">Rénovations de salle de bain</a></li> {{/* Added hover-bg-light-gray */}}
-            <li><a class="black no-underline db pv1 ph2 hover-bg-light-gray" href="/services/installation-plomberie">Installation de plomberie</a></li> {{/* Added hover-bg-light-gray */}}
-            <li><a class="black no-underline db pv1 ph2 hover-bg-light-gray" href="/services/climatisation">Climatisations</a></li> {{/* Added hover-bg-light-gray */}}
+          <ul id="services-dropdown" class="absolute bg-white pa2 shadow-1 dropdown-ul" style="min-width:200px; z-index:100; top: 100%; left: 0;">
+            <li><a class="black no-underline db pv1 ph2 hover-bg-light-gray" href="/services/depannage">Dépannage</a></li>
+            <li><a class="black no-underline db pv1 ph2 hover-bg-light-gray" href="/services/renovation-salle-de-bain">Rénovations de salle de bain</a></li>
+            <li><a class="black no-underline db pv1 ph2 hover-bg-light-gray" href="/services/installation-plomberie">Installation de plomberie</a></li>
+            <li><a class="black no-underline db pv1 ph2 hover-bg-light-gray" href="/services/climatisation">Climatisations</a></li>
           </ul>
         </li>
 
         {{/* Realisations Link */}}
-        <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
-          <a class="hover-white white no-underline" href="/realisations">Réalisations</a> {{/* Changed white-90 to white */}}
+        <li class="list f5 f4-ns fw4 dib mh2 {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl0 pr0" "pr0 pl0" }}">
+          <a class="hover-white white no-underline nav-link" href="/realisations">Réalisations</a>
         </li>
 
         {{/* Contact Button */}}
-        <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
-          <a class="hover-bg-light-blue bg-animate white no-underline ba b--white br2 ph3 pv2" href="/contact" style="background-color: #E64011; border-color: #E64011;">Contactez-moi</a> {{/* Changed white-90 to white */}}
+        <li class="list f5 f4-ns fw4 dib mh2 {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl0 pr0" "pr0 pl0" }}">
+          <a class="white no-underline ba b--white br2 ph3 pv2 btn-contact" href="tel:0789500369">Contactez-moi</a>
         </li>
       </ul>
       {{ partials.IncludeCached "social/follow.html" . }}
@@ -57,7 +54,6 @@
   </div>
 </nav>
 
-{{/* Add CSS for dropdown hover effect and initial hiding */}}
 <style>
 /* Hide the dropdown content by default */
 .dropdown-ul {
@@ -65,10 +61,32 @@
 }
 
 /* Show the dropdown content when hovering over the parent list item */
-/* This CSS rule ensures the dropdown is visible when hovering over the li (which includes the link and the ul) */
 .dropdown-li:hover .dropdown-ul {
   display: block;
 }
-</style>
 
-{{/* Removed the previous JavaScript block */}}
+/* Hover effect for standard navigation links */
+/* Add a white bottom border on hover */
+.nav-link:hover {
+  border-bottom: 1px solid #FFFFFF; /* White underline */
+  padding-bottom: 2px; /* Small space between text and underline */
+}
+
+/* Style for the Contact button */
+.btn-contact {
+  background-color: #E64011; /* Your orange */
+  border-color: #E64011; /* Your orange */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Hover effect for the Contact button */
+.btn-contact:hover {
+  background-color: #CC370D; /* A slightly darker orange on hover */
+  border-color: #CC370D; /* Darken border as well */
+}
+
+.dropdown-ul a:hover {
+  color: #2A306F; /* Change text color to blue on hover within dropdown */
+}
+
+</style>
