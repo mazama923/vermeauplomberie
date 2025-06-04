@@ -1,0 +1,363 @@
+
+/* Basic Reset or Normalize */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif; /* Replace with actual font */
+    line-height: 1.6;
+    color: #333; /* Adjust text color */
+    background-color: #f5f5f5; /* Light background color */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #003366; /* Dark blue color */
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn.primary {
+    background-color: #ff6600; /* Orange color */
+    color: white;
+    border: none;
+}
+
+.btn.primary:hover {
+    background-color: #e65a00; /* Darker orange */
+}
+
+.btn.secondary {
+    background-color: transparent;
+    color: #ff6600; /* Orange color */
+    border: 2px solid #ff6600; /* Orange border */
+}
+
+.btn.secondary:hover {
+    background-color: #ff6600;
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background-image: url('placeholder-hero-image.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px; /* Adjust padding as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; /* Adjust height */
+    overflow: hidden; /* Hide overflowing parts of the wave */
+}
+
+.hero-content {
+    z-index: 1; /* Ensure content is above the wave */
+}
+
+.hero-section h1 {
+    font-size: 3em; /* Adjust font size */
+    margin-bottom: 20px;
+    color: white; /* Ensure text is white */
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+    margin: 0 10px;
+}
+
+/* Wavy Dividers */
+.wavy-divider {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0; /* Remove extra space below SVG */
+    /* z-index: 1;  Optional: adjust z-index if content needs to be above the wave */
+}
+
+.wavy-divider svg {
+    display: block;
+    width: 100%;
+    height: 100px; /* Adjust height of the wave */
+}
+
+.bottom-wave {
+    bottom: 0;
+}
+
+.bottom-wave path {
+    fill: #f5f5f5; /* Color of the wave, matching the next section background */
+}
+
+.top-wave {
+    top: 0;
+    transform: rotate(180deg); /* Flip the wave for the top */
+}
+
+.top-wave path {
+    fill: #f5f5f5; /* Color of the wave, matching the previous section background */
+}
+
+/* Section Artisan */
+.artisan-section {
+    background-color: #f5f5f5; /* Light background */
+    padding: 80px 0;
+}
+
+.artisan-section .container {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    align-items: center;
+}
+
+.artisan-left {
+    flex: 1;
+    min-width: 300px; /* Minimum width before wrapping */
+    margin-right: 40px;
+}
+
+.artisan-right {
+    flex: 2;
+    min-width: 300px; /* Minimum width before wrapping */
+}
+
+.artisan-section h2 {
+     color: #003366; /* Dark blue color */
+     font-size: 2.5em;
+}
+
+.highlight-number {
+    display: flex;
+    align-items: baseline;
+    margin-top: 20px;
+}
+
+.highlight-number .number {
+    font-size: 4em;
+    font-weight: bold;
+    color: #ff6600; /* Orange color */
+    margin-right: 10px;
+}
+
+.highlight-number .text {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #003366; /* Dark blue color */
+}
+
+
+/* Section Services */
+.services-section {
+    background-color: white; /* White background */
+    padding: 80px 0;
+}
+
+.services-section h2 {
+     color: #ff6600; /* Orange color */
+}
+
+.services-section > .container > p {
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.service-card {
+    background-color: #e0f2f7; /* Light blue background */
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #b0e0e6; /* Light border */
+}
+
+.service-card .icon img {
+    width: 50px; /* Adjust icon size */
+    height: 50px; /* Adjust icon size */
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: #003366; /* Dark blue color */
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.service-card p {
+    font-size: 1em;
+    color: #555; /* Adjust text color */
+}
+
+/* Section Témoignages */
+.testimonials-section {
+    background-color: #f5f5f5; /* Light background */
+    padding: 80px 0;
+}
+
+.testimonials-section h2 {
+    color: #ff6600; /* Orange color */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimonials-grid {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    gap: 30px;
+    padding-bottom: 20px; /* Add padding for scrollbar */
+    justify-content: center; /* Center cards if they don't fill the width */
+}
+
+.testimonial-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    flex: 0 0 300px; /* Prevent shrinking, set base width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.testimonial-card .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #ff6600; /* Orange border around avatar */
+}
+
+.testimonial-card .rating {
+    color: #ff6600; /* Orange for stars */
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.testimonial-card .author {
+    font-weight: bold;
+    color: #003366; /* Dark blue color */
+}
+
+
+/* Section Call to Action */
+.cta-section {
+    position: relative;
+    background-color: #003366; /* Dark blue background */
+    color: white;
+    text-align: center;
+    padding: 100px 20px; /* Adjust padding */
+    overflow: hidden; /* Hide overflowing parts of the wave */
+    /* Add background pattern */
+    background-image: url('placeholder-pattern.png'); /* Replace with your pattern image */
+    background-size: cover; /* Or 'repeat' depending on your pattern */
+    background-position: center;
+}
+
+.cta-section .container {
+     z-index: 1; /* Ensure content is above the pattern/wave */
+     position: relative; /* Needed for z-index to work */
+}
+
+
+.cta-section h2 {
+    color: white; /* White color for heading */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.cta-buttons .btn {
+    margin: 0 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .artisan-section .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .artisan-left {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .artisan-right {
+        text-align: center;
+    }
+
+    .highlight-number {
+        justify-content: center;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+    }
+
+     .testimonials-grid {
+        flex-direction: column; /* Stack testimonials on small screens */
+        align-items: center;
+    }
+
+    .testimonial-card {
+        flex: 0 0 80%; /* Adjust width for stacked cards */
+        max-width: 350px; /* Max width for stacked cards */
+    }
+
+    .cta-section h2 {
+        font-size: 2em;
+    }
+
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+     .cta-buttons .btn {
+        margin: 0;
+    }
+}

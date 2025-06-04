@@ -1,0 +1,317 @@
+
+body {
+  	margin: 0;
+  	line-height: normal;
+}
+
+.vermeau-plomberie {
+  	margin: 0;
+}
+.blank-line {
+  	margin: 0;
+  	font-size: 20px;
+  	font-family: Lato;
+}
+.des-services-de-plomberie-fiab {
+  	margin: 0;
+  	font-size: 24px;
+}
+.vermeau-plomberie-des-container1 {
+  	width: 100%;
+}
+.vermeau-plomberie-des-container {
+  	width: 1411.5px;
+  	position: absolute;
+  	margin: 0 !important;
+  	top: 218px;
+  	left: 262px;
+  	color: #202020;
+  	display: flex;
+  	align-items: center;
+  	height: 446px;
+  	flex-shrink: 0;
+  	text-shadow: 1px 0 0 #000, 0 1px 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+  	z-index: 0;
+  	font-size: 64px;
+  	font-family: Oswald;
+}
+.vermeauplomberiegmailcom {
+  	position: relative;
+  	line-height: 140%;
+  	font-weight: 500;
+}
+.button {
+  	width: 356px;
+  	margin: 0 !important;
+  	position: absolute;
+  	top: 541px;
+  	left: 511px;
+  	border-radius: 8px;
+  	background-color: #e64011;
+  	border: 1px solid #e64011;
+  	box-sizing: border-box;
+  	height: 49px;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 8px 20px;
+  	z-index: 1;
+}
+.button1 {
+  	width: 208px;
+  	margin: 0 !important;
+  	position: absolute;
+  	top: 541px;
+  	left: 262px;
+  	border-radius: 8px;
+  	background-color: #e64011;
+  	border: 1px solid #e64011;
+  	box-sizing: border-box;
+  	height: 49px;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 8px 20px;
+  	z-index: 2;
+}
+.logo-wrapper-icon {
+  	width: 156px;
+  	height: 64px;
+  	object-fit: cover;
+}
+.column {
+  	width: 320px;
+  	height: 64px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+}
+.contact {
+  	align-self: stretch;
+  	position: relative;
+  	line-height: 150%;
+  	font-weight: 500;
+}
+.link {
+  	width: 216px;
+  	position: relative;
+  	line-height: 150%;
+  	display: inline-block;
+}
+.link3 {
+  	align-self: stretch;
+  	position: relative;
+  	line-height: 150%;
+}
+.footer-links {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	gap: 8px;
+  	font-size: 18px;
+  	font-family: Lato;
+}
+.footer-links1 {
+  	align-self: stretch;
+  	height: 21px;
+}
+.content {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	gap: 16px;
+}
+.column1 {
+  	flex: 1;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+}
+.link4 {
+  	width: 305px;
+  	position: relative;
+  	line-height: 150%;
+  	display: inline-block;
+}
+.footer-links2 {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	font-size: 18px;
+  	font-family: Lato;
+}
+.small-columns {
+  	width: 600px;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	padding: 16px 0px 0px;
+  	box-sizing: border-box;
+  	gap: 32px;
+}
+.columns {
+  	width: 1620px;
+  	height: 200px;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: flex-start;
+  	justify-content: space-between;
+  	flex-wrap: wrap;
+  	align-content: flex-start;
+  	gap: 40px 0px;
+}
+.facebook-icon {
+  	width: 37px;
+  	position: relative;
+  	height: 37px;
+  	object-fit: cover;
+}
+.text {
+  	width: 160px;
+  	position: relative;
+  	line-height: 150%;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.text1 {
+  	width: 584px;
+  	position: relative;
+  	line-height: 150%;
+  	text-align: center;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.copyright {
+  	align-self: stretch;
+  	filter: drop-shadow(0px -1px 0px #e4ebf3);
+  	border-top: 1px solid #000;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: 16px 0px;
+  	gap: 10px;
+  	font-size: 18px;
+  	font-family: Lato;
+}
+.footer {
+  	align-self: stretch;
+  	height: 402px;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: 64px 24px 8px;
+  	box-sizing: border-box;
+  	gap: 40px;
+  	background-image: url('Footer.png');
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: top;
+  	z-index: 3;
+  	font-size: 20px;
+  	font-family: Oswald;
+}
+.en-panne {
+  	width: 1054px;
+  	position: relative;
+  	font-size: 48px;
+  	line-height: 120%;
+  	font-weight: 500;
+  	font-family: Oswald;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.jinterviens-rapidement {
+  	width: 979px;
+  	position: relative;
+  	line-height: 150%;
+  	font-family: Inter;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.button2 {
+  	width: 208px;
+  	border-radius: 8px;
+  	background-color: #e64011;
+  	border: 1px solid #e64011;
+  	box-sizing: border-box;
+  	height: 49px;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 8px 20px;
+  	text-align: left;
+}
+.button3 {
+  	width: 356px;
+  	border-radius: 8px;
+  	background-color: #e64011;
+  	border: 1px solid #e64011;
+  	box-sizing: border-box;
+  	height: 49px;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 8px 20px;
+  	text-align: left;
+}
+.content2 {
+  	align-self: stretch;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: flex-start;
+  	justify-content: center;
+  	flex-wrap: wrap;
+  	align-content: flex-start;
+  	gap: 24px;
+}
+.small-container {
+  	width: 1054px;
+  	margin: 0 !important;
+  	position: absolute;
+  	top: 4065px;
+  	left: 338px;
+  	border-radius: 16px;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: flex-start;
+  	padding: 32px;
+  	box-sizing: border-box;
+  	z-index: 4;
+  	text-align: center;
+}
+.accueil {
+  	width: 100%;
+  	position: relative;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	background-image: url('Accueil.png');
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: top;
+  	text-align: left;
+  	font-size: 24px;
+  	color: #f0f8fb;
+  	font-family: Lato;
+}
+
