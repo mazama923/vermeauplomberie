@@ -9,6 +9,8 @@
     --color-white: #FFFFFF;
     --color-light-grey: #F2F2F2; /* Based on the image background */
     --color-light-blue-card: #E6F0FF; /* Based on the service card background */
+     /* Add texture background variable */
+    --texture-image: url('/texture/texture.png'); /* Path to your texture image */
   }
 
   /* Apply fonts */
@@ -103,6 +105,8 @@
   /* Section "Votre artisan plombier du Puy-de-Dôme" */
   .artisan-section {
       background-color: var(--color-light-grey);
+      background-image: var(--texture-image);
+      background-repeat: repeat;
       padding: 4rem 1rem; /* Padding top/bottom and horizontal */
   }
 
@@ -164,6 +168,8 @@
   /* Services Section */
   .services-section {
       background-color: var(--color-light-grey); /* Continues from previous */
+      background-image: var(--texture-image);
+      background-repeat: repeat;
       padding: 4rem 1rem;
   }
 
@@ -196,7 +202,7 @@
 
   .service-card {
       background-color: var(--color-light-blue-card);
-      border: 1px solid var(--color-blue);
+      border: 3px solid var(--color-blue);
       border-radius: 8px;
       padding: 2rem;
       text-align: center;
@@ -226,6 +232,8 @@
   /* Testimonials Section */
   .testimonials-section {
        background-color: var(--color-light-grey); /* Continues from previous */
+       background-image: var(--texture-image);
+       background-repeat: repeat;
        padding: 4rem 1rem;
        padding-bottom: 8rem; /* Extra padding at bottom for the wave below */
   }
@@ -292,15 +300,14 @@
   }
 
 
-  /* Final Section - "En panne à Clermont-Ferrand..." */
+  /* Final Section */
   .final-section {
     background-image: url('/img/accueil/final-background.png'); /* Your final background with wave */
     background-size: cover;
     background-position: center top; /* Position to show the wave at the top */
-    background-color: var(--color-blue); /* Fallback color and main dark blue */
     color: white;
     padding-top: 8rem; /* Adjust padding at top for the wave */
-    padding-bottom: 4rem; /* Adjust padding at bottom */
+    padding-bottom: 0;
     text-align: center;
     position: relative;
   }
@@ -315,6 +322,8 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 1rem; /* Responsive padding */
+      /* Added padding-bottom here to add space INSIDE the section above the very bottom edge if needed */
+       padding-bottom: 4rem; /* You can adjust this value */
   }
 
 
@@ -367,6 +376,13 @@
         .testimonial-card {
             max-width: 100%; /* Allow cards to take full width on small screens */
         }
+         .artisan-title, .services-title, .testimonials-title, .final-title {
+             font-size: 2rem; /* Slightly reduce title size on small screens */
+         }
+          .artisan-number {
+              font-size: 3rem; /* Reduce large number size on small screens */
+          }
+
    }
 
 
