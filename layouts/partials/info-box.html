@@ -1,0 +1,31 @@
+{{/* Ce partial reçoit l'objet page '.' */}}
+<div class="info-box">
+  <div class="info-box-icon">
+    {{ if .Params.info_box_icon }}
+      <img src="{{ .Params.info_box_icon | relURL }}" alt="Icone {{ .Title }}">
+    {{ end }}
+  </div>
+  <div class="info-box-content">
+    {{ if .Params.info_box_intro }}
+      <p>{{ .Params.info_box_intro }}</p>
+    {{ end }}
+
+    {{ if .Params.services_list }}
+      <h3>Mes services de {{ .Title | lower }}</h3> {{/* Titre pour la liste des services */}}
+      <ul class="info-box-list">
+        {{ range .Params.services_list }}
+          <li><span class="list-bullet"></span> {{ . }}</li> {{/* Ajouter un bullet point CSS */}}
+        {{ end }}
+      </ul>
+    {{ end }}
+
+    {{ if .Params.steps_list }}
+      <h3>Comment ça se passe ?</h3> {{/* Titre pour les étapes */}}
+      <ol class="info-box-steps">
+        {{ range $index, $step := .Params.steps_list }}
+          <li><span class="step-number">{{ add $index 1 }}.</span> {{ $step }}</li> {{/* Ajouter le numéro */}}
+        {{ end }}
+      </ol>
+    {{ end }}
+  </div>
+</div>

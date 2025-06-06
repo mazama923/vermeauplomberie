@@ -1,0 +1,13 @@
+{{/* Ce partial reçoit l'objet page '.' et accède à ses paramètres (front matter) */}}
+<section class="hero-service-section" style="background-image: url('{{ .Params.hero_image | relURL }}');">
+  {{/* Optionnel: Ajouter ici un élément pour la vague si c'est un SVG superposé */}}
+  {{/* {{ partial "svg-waves.html" (dict "color" "#votrecouleur" "direction" "bottom") }} */}}
+
+  <div class="hero-content-wrapper container"> {{/* Centrer le contenu */}}
+    <h1 class="hero-title">{{ .Title }}</h1> {{/* Titre de la page / service */}}
+    <div class="hero-contact-buttons">
+      <a href="tel:{{ .Params.contact_phone }}" class="btn btn-primary">{{ .Params.contact_phone }}</a> {{/* Classe de bouton */}}
+      <a href="mailto:{{ .Params.contact_email }}" class="btn btn-secondary">{{ .Params.contact_email }}</a> {{/* Classe de bouton */}}
+    </div>
+  </div>
+</section>

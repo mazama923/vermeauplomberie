@@ -1,0 +1,213 @@
+/* Assurez-vous que ce fichier est lié dans votre baseof.html */
+/* Exemple: <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}"> */
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+/* Styles généraux pour les sections */
+.service-content-area {
+  background-color: #f4f7f6; /* La couleur de fond claire sous le Hero */
+  /* padding-top: ... pour laisser de l'espace si une vague du Hero descend */
+  /* padding-bottom: ... pour laisser de l'espace si une vague du Bottom remonte */
+}
+
+.container {
+  max-width: 1000px; /* Largeur maximale du contenu centré */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* Padding intérieur sur mobile */
+  padding-right: 1rem; /* Padding intérieur sur mobile */
+}
+@media (min-width: 768px) { /* Exemple de breakpoint */
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.pv4 { padding-top: 2rem; padding-bottom: 2rem; } /* Exemple de classe de padding vertical (si pas Tachyons) */
+.pv5 { padding-top: 3rem; padding-bottom: 3rem; } /* Exemple de classe de padding vertical (si pas Tachyons) */
+
+
+/* Styles pour le titre principal et sous-titre */
+.service-main-title {
+  font-size: 2.5rem; /* Ajustez la taille */
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #333; /* Couleur foncée */
+}
+
+.service-main-subtitle {
+  font-size: 1.5rem; /* Ajustez la taille */
+  text-align: center;
+  margin-bottom: 2rem; /* Espace sous le sous-titre */
+  color: #555; /* Couleur de texte */
+}
+
+
+/* Styles pour la section Hero */
+.hero-service-section {
+  background-size: cover;
+  background-position: center center; /* Ajustez si la vague est en bas de l'image */
+  color: white;
+  padding-top: 8rem; /* Grand padding pour laisser de la place en haut */
+  padding-bottom: 12rem; /* Grand padding pour laisser de la place en bas, potentiellement pour une vague */
+  position: relative; /* Nécessaire si vous superposez des éléments comme une vague SVG */
+  display: flex; /* Pour centrer le contenu */
+  align-items: center; /* Centrer verticalement */
+  justify-content: center; /* Centrer horizontalement */
+  text-align: center; /* Centrer le texte à l'intérieur */
+}
+
+.hero-content-wrapper {
+    /* Ajustez la largeur si nécessaire, ou laissez .container gérer */
+    z-index: 10; /* Assurez-vous que le contenu est au-dessus de l'image ou de la vague */
+}
+
+.hero-title {
+  font-size: 3rem; /* Grande taille pour le titre Hero */
+  margin-bottom: 1.5rem;
+}
+
+.hero-contact-buttons a {
+  display: inline-block; /* Les boutons côte à côte */
+  margin: 0.5rem; /* Espacement entre les boutons */
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px; /* Bords arrondis */
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #ff6600; /* Exemple de couleur orange */
+  color: white;
+  border: 1px solid #ff6600;
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.2); /* Exemple de couleur semi-transparente */
+  color: white;
+  border: 1px solid white;
+}
+
+
+/* Styles pour la boîte d'informations (info-box) */
+.info-box {
+  background-color: white; /* Fond blanc pour la boîte */
+  border: 1px solid #e0e0e0; /* Bordure légère */
+  border-radius: 8px; /* Bords arrondis */
+  padding: 2rem; /* Espacement intérieur */
+  margin-top: 2rem; /* Espace au-dessus de la boîte */
+  margin-bottom: 2rem; /* Espace en dessous de la boîte */
+  display: flex; /* Utiliser flexbox pour l'icône et le contenu */
+  gap: 2rem; /* Espacement entre l'icône et le contenu */
+}
+
+.info-box-icon {
+  flex-shrink: 0; /* Empêche l'icône de rétrécir */
+  width: 80px; /* Taille de l'icône */
+  height: 80px; /* Taille de l'icône */
+  /* Ajoutez des styles si l'icône a un fond ou une bordure */
+}
+
+.info-box-icon img {
+    display: block; /* Important pour enlever l'espace sous l'image */
+    max-width: 100%;
+    height: auto;
+}
+
+
+.info-box-content h3 {
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333; /* Couleur foncée pour les titres de listes */
+}
+
+.info-box-list, .info-box-steps {
+  list-style: none; /* Enlève les styles de liste par défaut */
+  padding: 0;
+  margin-top: 1rem; /* Espace au-dessus des listes */
+  margin-bottom: 1rem; /* Espace en dessous des listes */
+}
+
+.info-box-list li {
+  margin-bottom: 0.8rem; /* Espacement entre les éléments de liste */
+  position: relative; /* Nécessaire pour positionner le bullet */
+  padding-left: 1.5rem; /* Espacement pour le bullet personnalisé */
+}
+
+.list-bullet {
+  position: absolute;
+  left: 0;
+  top: 0.4rem; /* Ajustez pour aligner verticalement */
+  width: 8px;
+  height: 8px;
+  background-color: #ff6600; /* Couleur du bullet (orange) */
+  border-radius: 50%; /* Forme ronde */
+}
+
+.info-box-steps li {
+    margin-bottom: 0.8rem; /* Espacement entre les étapes */
+    position: relative; /* Nécessaire pour positionner le numéro */
+    padding-left: 2rem; /* Espacement pour le numéro */
+}
+
+.step-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: #ff6600; /* Couleur du numéro (orange) */
+}
+
+
+/* Styles pour la section Appel à l'Action du Bas */
+.bottom-cta-section {
+  background-size: cover;
+  background-position: center center; /* Ajustez si la vague est en haut de l'image */
+  color: white;
+  padding-top: 10rem; /* Grand padding pour laisser de la place en haut, potentiellement pour une vague */
+  padding-bottom: 6rem; /* Padding en bas */
+  position: relative; /* Nécessaire si vous superposez des éléments comme une vague SVG */
+  display: flex; /* Pour centrer le contenu */
+  align-items: center; /* Centrer verticalement */
+  justify-content: center; /* Centrer horizontalement */
+}
+
+.bottom-cta-content-wrapper {
+    /* Ajustez la largeur si nécessaire, ou laissez .container gérer */
+     z-index: 10; /* Assurez-vous que le contenu est au-dessus de l'image ou de la vague */
+}
+
+.bottom-cta-title {
+  font-size: 2rem; /* Taille pour le titre CTA */
+  margin-bottom: 0.5rem;
+}
+
+.bottom-cta-subtitle {
+  font-size: 1.2rem; /* Taille pour le sous-titre CTA */
+  margin-bottom: 1.5rem;
+}
+
+.bottom-contact-buttons a {
+  /* Réutilise les styles des boutons .btn-primary et .btn-secondary définis ci-dessus */
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Media Query pour la boîte d'infos sur petits écrans */
+@media (max-width: 767px) {
+  .info-box {
+    flex-direction: column; /* Empile l'icône et le contenu verticalement */
+    gap: 1.5rem;
+  }
+  .info-box-icon {
+    align-self: center; /* Centre l'icône empilée */
+  }
+}
