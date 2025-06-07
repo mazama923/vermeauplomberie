@@ -9,56 +9,6 @@
     color: var(--color-blue); /* Default heading color */
   }
 
-  /* Hero Section Styles */
-  .hero-section {
-    background-image:
-      url('/img/hero-background.png'),
-      var(--texture-image);
-    background-size: cover;
-    background-position: center bottom; /* Position to show the wave at the bottom */
-    color: white;
-    padding-top: 8rem; /* Adjust padding as needed */
-    padding-bottom: 10rem; /* Extra padding at bottom for the wave */
-    position: relative; /* Needed for potential future absolute positioning */
-  }
-
-   /* Add a semi-transparent overlay if your background image isn't dark enough */
-  .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity */
-      z-index: 1; /* Below content */
-  }
-
-  .hero-content {
-      position: relative;
-      z-index: 2; /* Above overlay */
-      max-width: 1200px; /* Match your header/footer max width */
-      margin: 0 auto;
-      padding: 0 1rem; /* Responsive padding */
-      text-align: center; /* Center content horizontally */
-  }
-
-
-  .hero-title {
-    font-size: 3rem; /* Adjust size */
-    margin-bottom: 1rem;
-    color: var(--color-white);
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    line-height: 1.2;
-  }
-
-   .hero-subtitle {
-       font-size: 1.2rem;
-       margin-bottom: 2rem;
-       color: white;
-       font-weight: 400;
-   }
-
   /* Section "Votre artisan plombier du Puy-de-Dôme" */
   .artisan-section {
       <!-- background-color: var(--color-light-grey); -->
@@ -256,51 +206,6 @@
       font-size: 0.95rem;
   }
 
-
-  /* Final Section */
-  .final-section {
-    background-image: 
-      url('/img/bottom-background.png'),
-      var(--texture-image);
-    background-size: cover;
-    background-position: center top; /* Position to show the wave at the top */
-    color: white;
-    padding-top: 8rem; /* Adjust padding at top for the wave */
-    padding-bottom: 0;
-    text-align: center;
-    position: relative;
-  }
-
-   /* Add a semi-transparent overlay if needed for the final section background */
-  /* Similar to hero overlay if your image needs it */
-
-
-  .final-content {
-      position: relative;
-      z-index: 2;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1rem; /* Responsive padding */
-      /* Added padding-bottom here to add space INSIDE the section above the very bottom edge if needed */
-       padding-bottom: 4rem; /* You can adjust this value */
-  }
-
-
-  .final-title {
-    font-size: 2.5rem; /* Adjust size */
-    margin-bottom: 1rem;
-    color: var(--color-white);
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    line-height: 1.2;
-  }
-
-   .final-subtitle {
-       font-size: 1.2rem;
-       margin-bottom: 2rem;
-       color: white;
-       font-weight: 400;
-   }
 </style>
 
 {{/* Hero Section */}}

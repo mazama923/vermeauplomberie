@@ -176,6 +176,93 @@ h1, h2, h3, h4, h5, h6 {
     color: #ff6600; /* Couleur du numéro (orange) */
 }
 
+/* Hero Section Styles */
+.hero-section {
+  background-image:
+    url('/img/hero-background.png'),
+    var(--texture-image);
+  background-size: cover;
+  background-position: center bottom; /* Position to show the wave at the bottom */
+  color: white;
+  padding-top: 8rem; /* Adjust padding as needed */
+  padding-bottom: 10rem; /* Extra padding at bottom for the wave */
+  position: relative; /* Needed for potential future absolute positioning */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity */
+    z-index: 1; /* Below content */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Above overlay */
+    max-width: 1200px; /* Match your header/footer max width */
+    margin: 0 auto;
+    padding: 0 1rem; /* Responsive padding */
+    text-align: center; /* Center content horizontally */
+}
+
+.hero-title {
+  font-size: 3rem; /* Adjust size */
+  margin-bottom: 1rem;
+  color: var(--color-white);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: white;
+  font-weight: 400;
+}
+
+/* Final Section */
+.final-section {
+  background-image: 
+    url('/img/bottom-background.png'),
+    var(--texture-image);
+  background-size: cover;
+  background-position: center top; /* Position to show the wave at the top */
+  color: white;
+  padding-top: 8rem; /* Adjust padding at top for the wave */
+  padding-bottom: 0;
+  text-align: center;
+  position: relative;
+}
+
+.final-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Responsive padding */
+  padding-bottom: 4rem; /* You can adjust this value */
+  }
+
+.final-title {
+  font-size: 2.5rem; /* Adjust size */
+  margin-bottom: 1rem;
+  color: var(--color-white);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.final-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: white;
+  font-weight: 400;
+}
+
 /* --- Bottom --- */
 .button-primary {
      background-color: var(--color-orange);

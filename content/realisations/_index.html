@@ -25,40 +25,6 @@
     line-height: 1.6;
 }
 
-//* --- Hero Section --- */
-.section-realisations-hero {
-    background-image: url('/img/hero-background.png'); /* Chemin de votre image de fond */
-    background-size: cover; /* Pour couvrir toute la zone */
-    background-position: center;
-    color: white; /* Texte blanc sur l'image sombre */
-    text-align: center;
-    padding: 100px 20px; /* Plus de padding pour l'espace */
-    display: flex; /* Pour centrer le contenu verticalement */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px; /* Hauteur minimale */
-    position: relative; /* Nécessaire pour le z-index et les vagues */
-    z-index: 0; /* S'assure que le contenu est sous la vague du bas si elle est positionnée au-dessus */
-}
-
-.section-realisations-hero .hero-content {
-     position: relative;
-     z-index: 2; /* Met le contenu au-dessus de l'image de fond et des vagues */
-}
-
-
-.section-realisations-hero h1 {
-    color: white; /* Assurez-vous que le titre est blanc */
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.section-realisations-hero p {
-    font-size: 1.3em;
-    margin-bottom: 30px;
-}
-
 /* --- Gallery Sections --- */
 .section-gallery {
     padding-top: 80px; /* Ajuster le padding pour laisser de la place à la vague supérieure */
@@ -148,22 +114,17 @@
 
 </style>
 
-<div class="realisations-page-container">
-
-    <!-- HERO SECTION -->
-    <section class="section section-hero section-realisations-hero">
-        <div class="hero-background">
-            <!-- L'image de fond sera gérée par CSS -->
+<!-- HERO SECTION -->
+<section class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">Verm'eau Plomberie,<br>des solutions qui coulent de source !</h1>
+        <p class="hero-subtitle">Des services de plomberie fiables et professionnels pour tous vos besoins domestiques.</p>
+        <div class="hero-contact-buttons">
+            <a class="btn button-primary" href="tel:0789500369">07 89 50 03 69</a>
+            <a class="btn button-secondary" href="mailto:vermeauplomberie@gmail.com">vermeauplomberie@gmail.com</a>
         </div>
-        <div class="hero-content">
-            <h1>Mes réalisations</h1>
-            <p>Des projets concrets pour des clients satisfaits.</p>
-            <div class="hero-contact-buttons">
-                <a href="tel:0789505069" class="button button-primary">07 89 50 50 69</a>
-                <a href="mailto:vermeauxplomberie@gmail.com" class="button button-secondary">vermeauxplomberie@gmail.com</a>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     <!-- SAVOIR-FAIRE SECTION -->
     <section class="section section-savoir-faire">
@@ -175,7 +136,6 @@
 
     <!-- BATHROOM RENOVATIONS SECTION -->
     <section class="section section-gallery section-bathroom-renovations">
-         <!-- Wavy divider top - Example using SVG -->
         <div class="container">
             <h2 class="section-title">Rénovations de salle de bain personnalisées</h2>
             <div class="gallery-wrapper">
@@ -246,16 +206,13 @@
         </div>
     </section>
 
-    <!-- BOTTOM CTA / FOOTER SECTION -->
-    <section class="section section-bottom-cta">
-        <div class="container">
-            <h2>En panne à Clermont-Ferrand, Issoire ou Vic-le-Comte ?</h2>
-            <p>J'interviens rapidement à votre domicile dans un rayon de 50 km.</p>
-             <div class="bottom-contact-buttons">
-                <a href="tel:0789505069" class="button button-primary">07 89 50 50 69</a>
-                <a href="mailto:vermeauxplomberie@gmail.com" class="button button-secondary">vermeauxplomberie@gmail.com</a>
-            </div>
+<section class="final-section">
+    <div class="final-content">
+        <h2 class="final-title">En panne à Clermont-Ferrand, Issoire ou Vic-le-Comte ?</h2>
+        <p class="final-subtitle">J'interviens rapidement à votre domicile dans un rayon de 50 km.</p>
+        <div class="bottom-contact-buttons">
+            <a class="btn button-primary" href="tel:0789500369">07 89 50 03 69</a>
+            <a class="btn button-secondary" href="mailto:vermeauplomberie@gmail.com">vermeauplomberie@gmail.com</a>
         </div>
-    </section>
-
-</div>
+    </div>
+</section>
