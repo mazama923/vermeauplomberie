@@ -1,6 +1,5 @@
 {{ define "main" }}
 
-{{/* Add custom styles for this page */}}
 <style>
   /* Apply fonts */
   h1, h2, h3, h4, h5, h6 {
@@ -135,77 +134,6 @@
       color: #555;
       line-height: 1.5;
   }
-
-  /* Testimonials Section */
-  .testimonials-section {
-       <!-- background-color: var(--color-light-grey); /* Continues from previous */ -->
-       background-image: var(--texture-image);
-       background-repeat: repeat;
-       padding: 4rem 1rem;
-       padding-bottom: 8rem; /* Extra padding at bottom for the wave below */
-  }
-
-   .testimonials-content {
-        max-width: 1200px;
-        margin: 0 auto;
-   }
-
-  .testimonials-title {
-      font-size: 2.5rem; /* Adjust size */
-      margin-bottom: 3rem;
-      color: var(--color-orange);
-      font-family: 'Oswald', sans-serif;
-      font-weight: 700;
-      text-align: center; /* Center title */
-  }
-
-  .testimonials-grid {
-      display: flex;
-      flex-wrap: wrap; /* Stack on small screens */
-      justify-content: center; /* Center items when they wrap */
-      gap: 2rem; /* Space between testimonials */
-  }
-
-  .testimonial-card {
-      background-color: white; /* White background for cards */
-      border-radius: 8px;
-      padding: 2rem;
-      text-align: center;
-      width: 100%; /* Full width on small */
-      max-width: 350px; /* Max width for each card on larger screens */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
-      display: flex; /* Use flex to align content inside card if needed */
-      flex-direction: column; /* Stack content vertically */
-      align-items: center; /* Center content vertically */
-  }
-
-  .testimonial-card img {
-      width: 80px; /* Adjust image size */
-      height: 80px;
-      border-radius: 50%; /* Make image round */
-      object-fit: cover; /* Crop image to fit circle */
-      margin-bottom: 1rem;
-  }
-
-  .testimonial-name {
-      font-weight: 700;
-      color: var(--color-blue);
-      margin-bottom: 0.5rem;
-  }
-
-  .testimonial-stars {
-      color: red; /* Color of the stars */
-      margin-bottom: 1rem;
-      font-size: 1.2rem; /* Adjust star size */
-  }
-
-  .testimonial-quote {
-      font-style: italic;
-      color: #555;
-      line-height: 1.5;
-      font-size: 0.95rem;
-  }
-
 </style>
 
 {{/* Hero Section */}}
@@ -294,19 +222,19 @@
         <h2 class="testimonials-title">Témoignages</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card">
-                <img src="/img/testimonial/bruno.png" alt="Photo client 1">
+                <img src="/img/testimonial/bruno.png" alt="Photo client 1" class="testimonial-avatar">
                 <div class="testimonial-name">Bruno Randon</div>
                 <div class="testimonial-stars">★★★★★</div> {{/* Using Unicode stars */}}
                 <p class="testimonial-quote">"Artisan que je conseille les yeux fermés. Rénovation salle de bain dans appartement. Travail soigné. Devis respecté. De bon conseils pendant les travaux. Chantier laissé propre chaque jour. Délais tenus."</p>
             </div>
             <div class="testimonial-card">
-                <img src="/img/testimonial/sylvie.png" alt="Photo client 2">
+                <img src="/img/testimonial/sylvie.png" alt="Photo client 2" class="testimonial-avatar">
                 <div class="testimonial-name">Sylvie Chante</div> {{/* Corrected name based on image */}}
                 <div class="testimonial-stars">★★★★★</div>
                 <p class="testimonial-quote">"Artisan discret au travail, très soigneux et qui a complètement répondu à nos attentes. Respect absolument des délais de réalisation. Très satisfaite !"</p>
             </div>
             <div class="testimonial-card">
-                <img src="/img/testimonial/drine.png" alt="Photo client 3">
+                <img src="/img/testimonial/drine.png" alt="Photo client 3" class="testimonial-avatar">
                 <div class="testimonial-name">Drine Ben</div>
                 <div class="testimonial-stars">★★★★★</div>
                 <p class="testimonial-quote">"Professionnel sympathique, très sérieux, ponctuel et efficace. Très bon travail réalisé dans les délais !"</p>

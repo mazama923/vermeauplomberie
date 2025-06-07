@@ -60,58 +60,6 @@
     flex-shrink: 0; /* Empêche les images de rétrécir */
 }
 
-/* --- Testimonials Section --- */
-.section-testimonials {
-    background-color: #f0f0f0; /* Couleur de fond claire */
-}
-
-.testimonials-container {
-    display: flex;
-    justify-content: center; /* Centre les cartes */
-    gap: 30px; /* Espace entre les cartes */
-    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne sur les petits écrans */
-}
-
-.testimonial-card {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 300px; /* Largeur maximale pour chaque carte */
-    flex: 1 1 280px; /* Flex-grow, flex-shrink, flex-basis - permet aux cartes de grandir un peu mais pas trop et d'avoir une base de 280px */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.testimonial-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; /* Rendre l'image ronde */
-    object-fit: cover;
-    margin-bottom: 15px;
-    border: 3px solid #d9534f; /* Bordure orange autour de l'avatar */
-}
-
-.testimonial-name {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.testimonial-rating {
-    color: #ffc107; /* Couleur jaune pour les étoiles */
-    margin-bottom: 15px;
-    font-size: 1.2em;
-}
-
-.testimonial-quote {
-    font-style: italic;
-    color: #555;
-    line-height: 1.5;
-}
-
 </style>
 
 <!-- HERO SECTION -->
@@ -170,42 +118,34 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS SECTION -->
-    <section class="section section-testimonials">
-        <div class="container">
-            <h2 class="section-title">Témoignages</h2>
-            <div class="testimonials-container">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <img src="/img/testimonial/bruno.png" alt="Bruno Randou" class="testimonial-avatar" loading="lazy">
-                    <p class="testimonial-name">Bruno Randou</p>
-                    <div class="testimonial-rating">
-                        ★★★★★ <!-- Replace with icons if possible -->
-                    </div>
-                    <p class="testimonial-quote">"Artisan que je conseille les yeux fermés. Rénovation salle de bain dans appartement nouvel acquis. Devis respecté. De bon conseil pendant les travaux. Chantier laissé propre chaque jour. Détermine."</p>
-                </div>
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                     <img src="/img/testimonial/sylvie.png" alt="Sylvie Chantri" class="testimonial-avatar" loading="lazy">
-                    <p class="testimonial-name">Sylvie Chantri</p>
-                     <div class="testimonial-rating">
-                        ★★★★★
-                    </div>
-                    <p class="testimonial-quote">"Artisan discret au travail,très soigneux et qui a complètement répondu à nos attentes. Respect également des délais de réalisation. Très satisfaite"</p>
-                </div>
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                     <img src="/img/testimonial/drine.png" alt="Driss Ben" class="testimonial-avatar" loading="lazy">
-                    <p class="testimonial-name">Drine Ben</p>
-                     <div class="testimonial-rating">
-                        ★★★★★
-                    </div>
-                    <p class="testimonial-quote">"Professionnel sympathique très sérieux, ponctuel et à l'écoute. Très bon travail réalisé dans les délais."</p>
-                </div>
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials-section">
+     <div class="testimonials-content">
+        <h2 class="testimonials-title">Témoignages</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <img src="/img/testimonial/bruno.png" alt="Photo client 1"class="testimonial-avatar">
+                <div class="testimonial-name">Bruno Randon</div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Artisan que je conseille les yeux fermés. Rénovation salle de bain dans appartement. Travail soigné. Devis respecté. De bon conseils pendant les travaux. Chantier laissé propre chaque jour. Délais tenus."</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="/img/testimonial/sylvie.png" alt="Photo client 2" class="testimonial-avatar">
+                <div class="testimonial-name">Sylvie Chante</div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Artisan discret au travail, très soigneux et qui a complètement répondu à nos attentes. Respect absolument des délais de réalisation. Très satisfaite !"</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="/img/testimonial/drine.png" alt="Photo client 3" class="testimonial-avatar">
+                <div class="testimonial-name">Drine Ben</div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Professionnel sympathique, très sérieux, ponctuel et efficace. Très bon travail réalisé dans les délais !"</p>
             </div>
         </div>
-    </section>
+     </div>
+</section>
 
+<!-- Final Section -->
 <section class="final-section">
     <div class="final-content">
         <h2 class="final-title">En panne à Clermont-Ferrand, Issoire ou Vic-le-Comte ?</h2>

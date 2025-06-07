@@ -1,21 +1,11 @@
 {{ define "main" }}
-
-  {{/* Section Hero */}}
   {{ partial "hero-service.html" . }}
-
-  {{/* Section Contenu Principal (sous la vague Hero) */}}
-  {{/* Cette section a un fond clair et centre le contenu */}}
   <section class="service-content-area">
-    <div class="container pv4"> {{/* Utilisez vos classes Tachyons ou CSS pour container, padding vertical */}}
-      <h2 class="service-main-title">{{ .Title }}</h2> {{/* Titre principal de la page, vient du front matter */}}
-      <p class="service-main-subtitle">{{ .Params.subtitle }}</p> {{/* Sous-titre de la page, vient du front matter */}}
-
-      {{/* Boîte d'informations */}}
+    <div class="container pv4">
+      <h2 class="service-main-title">{{ .Title }}</h2>
+      <p class="service-main-subtitle">{{ .Params.subtitle }}</p>
       {{ partial "info-box.html" . }}
     </div>
   </section>
-
-  {{/* Section Appel à l'Action du Bas */}}
   {{ partial "bottom-cta-service.html" . }}
-
 {{ end }}

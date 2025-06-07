@@ -263,6 +263,84 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+/* Testimonials Section */
+.testimonials-section {
+  <!-- background-color: var(--color-light-grey); /* Continues from previous */ -->
+  background-image: var(--texture-image);
+  background-repeat: repeat;
+  padding: 4rem 1rem;
+  padding-bottom: 8rem; /* Extra padding at bottom for the wave below */
+}
+
+.testimonials-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonials-title {
+  font-size: 2.5rem; /* Adjust size */
+  margin-bottom: 3rem;
+  color: var(--color-orange);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-align: center; /* Center title */
+}
+
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap; /* Stack on small screens */
+  justify-content: center; /* Center items when they wrap */
+  gap: 2rem; /* Space between testimonials */
+}
+
+.testimonial-card {
+  background-color: white; /* White background for cards */
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  width: 100%; /* Full width on small */
+  max-width: 350px; /* Max width for each card on larger screens */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+  display: flex; /* Use flex to align content inside card if needed */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content vertically */
+  }
+
+.testimonial-card img {
+  width: 80px; /* Adjust image size */
+  height: 80px;
+  border-radius: 50%; /* Make image round */
+  object-fit: cover; /* Crop image to fit circle */
+  margin-bottom: 1rem;
+}
+
+.testimonial-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Rendre l'image ronde */
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #d9534f; /* Bordure orange autour de l'avatar */
+}
+.testimonial-name {
+  font-weight: 700;
+  color: var(--color-blue);
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-stars {
+  color: red; /* Color of the stars */
+  margin-bottom: 1rem;
+  font-size: 1.2rem; /* Adjust star size */
+}
+
+.testimonial-quote {
+  font-style: italic;
+  color: #555;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
 /* --- Bottom --- */
 .button-primary {
      background-color: var(--color-orange);
