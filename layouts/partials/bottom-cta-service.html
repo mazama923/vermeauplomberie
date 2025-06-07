@@ -1,14 +1,11 @@
-{{/* Ce partial reçoit l'objet page '.' */}}
 <section class="bottom-cta-section" style="background-image: url('{{ .Params.bottom_image | relURL }}');">
-    {{/* Optionnel: Ajouter ici un élément pour la vague si c'est un SVG superposé */}}
-    {{/* {{ partial "svg-waves.html" (dict "color" "#votrecouleur" "direction" "top") }} */}}
 
-  <div class="bottom-cta-content-wrapper container tc"> {{/* Centrer et centrer texte */}}
-    <h2 class="bottom-cta-title">{{ .Params.bottom_cta_title }}</h2> {{/* Titre CTA */}}
-    <p class="bottom-cta-subtitle">{{ .Params.bottom_cta_subtitle }}</p> {{/* Sous-titre CTA */}}
+  <div class="bottom-cta-content-wrapper container tc">
+    <h2 class="bottom-cta-title">{{ .Params.bottom_cta_title }}</h2>
+    <p class="bottom-cta-subtitle">{{ .Params.bottom_cta_subtitle }}</p>
     <div class="bottom-contact-buttons">
-      <a href="tel:{{ .Params.contact_phone }}" class="btn btn-primary">{{ .Params.contact_phone }}</a> {{/* Classe de bouton */}}
-      <a href="mailto:{{ .Params.contact_email }}" class="btn btn-secondary">{{ .Params.contact_email }}</a> {{/* Classe de bouton */}}
+      <a href="tel:{{ .Params.contact_phone }}" class="btn btn-primary">{{ .Params.contact_phone }}</a>
+      <a href="mailto:{{ .Params.contact_email }}" class="btn btn-secondary">{{ .Params.contact_email }}</a>
     </div>
   </div>
 </section>

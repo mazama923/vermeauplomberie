@@ -1,13 +1,29 @@
-/* Assurez-vous que ce fichier est lié dans votre baseof.html */
 /* Exemple: <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}"> */
 
+/* fonts */
 body {
   font-family: 'Lato', sans-serif;
+  color: #222; /* Default text color */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700; /* Oswald often looks good bold */
+}
+
+.title-oswald {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+.title-oswald-light {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500; /* Or 700, based on preference */
 }
 
 /* Styles généraux pour les sections */
 .service-content-area {
-  background-color: #f4f7f6; /* La couleur de fond claire sous le Hero */
+  /* background-color: #f4f7f6; /* La couleur de fond claire sous le Hero */ */
   /* padding-top: ... pour laisser de l'espace si une vague du Hero descend */
   /* padding-bottom: ... pour laisser de l'espace si une vague du Bottom remonte */
 }
@@ -49,10 +65,10 @@ body {
 /* Styles pour la section Hero */
 .hero-service-section {
   background-size: cover;
-  background-position: center center; /* Ajustez si la vague est en bas de l'image */
+  background-position: center bottom; /* Ajustez si la vague est en bas de l'image */
   color: white;
   padding-top: 8rem; /* Grand padding pour laisser de la place en haut */
-  padding-bottom: 12rem; /* Grand padding pour laisser de la place en bas, potentiellement pour une vague */
+  padding-bottom: 10rem; /* Grand padding pour laisser de la place en bas, potentiellement pour une vague */
   position: relative; /* Nécessaire si vous superposez des éléments comme une vague SVG */
   display: flex; /* Pour centrer le contenu */
   align-items: center; /* Centrer verticalement */
@@ -87,8 +103,9 @@ body {
 
 .btn-secondary {
   background-color: rgba(255, 255, 255, 0.2); /* Exemple de couleur semi-transparente */
-  color: white;
-  border: 1px solid white;
+  /* background-color: #ff6600; /* Exemple de couleur orange */ */
+  color: #ff6600;
+  border: 2px solid #ff6600;
 }
 
 
@@ -166,7 +183,7 @@ body {
 /* Styles pour la section Appel à l'Action du Bas */
 .bottom-cta-section {
   background-size: cover;
-  background-position: center center; /* Ajustez si la vague est en haut de l'image */
+  background-position: center top; /* Ajustez si la vague est en haut de l'image */
   color: white;
   padding-top: 10rem; /* Grand padding pour laisser de la place en haut, potentiellement pour une vague */
   padding-bottom: 6rem; /* Padding en bas */
