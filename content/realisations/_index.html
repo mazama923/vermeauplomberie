@@ -25,37 +25,7 @@
     line-height: 1.6;
 }
 
-/* --- Wavy Dividers --- */
-.wave-divider {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    overflow: hidden; /* Cache les parties de la vague qui dépassent */
-    line-height: 0; /* Supprime l'espace blanc potentiel sous le SVG */
-    z-index: 1; /* S'assure que la vague est au-dessus de la section précédente/suivante */
-}
-
-.wave-top {
-    top: 0;
-    transform: translateY(-100%); /* Positionne la vague en haut et la remonte pour être entre les sections */
-}
-
-.wave-bottom {
-    bottom: 0;
-    transform: translateY(100%); /* Positionne la vague en bas et la descend pour être entre les sections */
-}
-
-.wave-divider svg {
-    display: block;
-    width: 100%;
-    height: 100px; /* Hauteur de la vague, ajustez si besoin */
-}
-
-/* Note: Les couleurs `fill` des SVG doivent correspondre aux couleurs de fond des sections adjacentes.
-   Dans l'HTML, le fill est mis en `#f0f0f0` (couleur du body) ou `#2a3b70` (couleur du footer). */
-
-
-/* --- Hero Section --- */
+//* --- Hero Section --- */
 .section-realisations-hero {
     background-image: url('/img/hero-background.png'); /* Chemin de votre image de fond */
     background-size: cover; /* Pour couvrir toute la zone */
@@ -88,53 +58,6 @@
     font-size: 1.3em;
     margin-bottom: 30px;
 }
-
-/* --- Call to Action Buttons (General Style) --- */
-.cta-buttons {
-    display: flex;
-    justify-content: center; /* Centre les boutons */
-    gap: 20px; /* Espace entre les boutons */
-    flex-wrap: wrap; /* Permet aux boutons de s'enrouler sur les petits écrans */
-}
-
-.button {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Transition pour l'effet hover */
-    border: 2px solid transparent; /* Ajoute une bordure transparente pour éviter les sauts de mise en page au survol */
-}
-
-.button-primary {
-    background-color: #d9534f; /* Orange/Rouge */
-    color: white;
-    border-color: #d9534f;
-}
-
-.button-secondary {
-     background-color: rgba(255, 255, 255, 0.2); /* Fond semi-transparent */
-     color: white;
-     border-color: white;
-}
-
-/* --- Button Hover Effect (Roll Hover basic) --- */
-.button-primary:hover {
-    background-color: white;
-    color: #d9534f; /* Le texte devient orange/rouge */
-    border-color: #d9534f;
-    /* transform: translateY(-2px); -- Exemple d'un léger déplacement */
-}
-
-.button-secondary:hover {
-     background-color: white;
-     color: #2a3b70; /* Le texte devient bleu foncé */
-     border-color: white;
-     /* transform: translateY(-2px); */
-}
-
 
 /* --- Gallery Sections --- */
 .section-gallery {
@@ -235,16 +158,10 @@
         <div class="hero-content">
             <h1>Mes réalisations</h1>
             <p>Des projets concrets pour des clients satisfaits.</p>
-            <div class="cta-buttons">
+            <div class="hero-contact-buttons">
                 <a href="tel:0789505069" class="button button-primary">07 89 50 50 69</a>
                 <a href="mailto:vermeauxplomberie@gmail.com" class="button button-secondary">vermeauxplomberie@gmail.com</a>
             </div>
-        </div>
-        <!-- Wavy divider bottom - Example using SVG -->
-        <div class="wave-divider wave-bottom">
-            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0 C 144 40, 288 80, 432 80 C 576 80, 720 40, 864 40 C 1008 40, 1152 80, 1296 80 C 1440 80, 1440 0, 1440 0 Z" fill="#f0f0f0"/> <!-- Use your background color -->
-            </svg>
         </div>
     </section>
 
@@ -259,11 +176,6 @@
     <!-- BATHROOM RENOVATIONS SECTION -->
     <section class="section section-gallery section-bathroom-renovations">
          <!-- Wavy divider top - Example using SVG -->
-        <div class="wave-divider wave-top">
-             <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1440 100 C 1296 60, 1152 20, 1008 20 C 864 20, 720 60, 576 60 C 432 60, 288 20, 144 20 C 0 20, 0 100, 0 100 Z" fill="#f0f0f0"/> <!-- Use your background color -->
-             </svg>
-        </div>
         <div class="container">
             <h2 class="section-title">Rénovations de salle de bain personnalisées</h2>
             <div class="gallery-wrapper">
@@ -278,22 +190,10 @@
                 </div>
             </div>
         </div>
-         <!-- Wavy divider bottom - Example using SVG -->
-        <div class="wave-divider wave-bottom">
-            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0 C 144 40, 288 80, 432 80 C 576 80, 720 40, 864 40 C 1008 40, 1152 80, 1296 80 C 1440 80, 1440 0, 1440 0 Z" fill="#f0f0f0"/> <!-- Use your background color -->
-            </svg>
-        </div>
     </section>
 
     <!-- HEATING/COOLING INSTALLATIONS SECTION -->
     <section class="section section-gallery section-installations">
-         <!-- Wavy divider top - Example using SVG -->
-        <div class="wave-divider wave-top">
-             <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1440 100 C 1296 60, 1152 20, 1008 20 C 864 20, 720 60, 576 60 C 432 60, 288 20, 144 20 C 0 20, 0 100, 0 100 Z" fill="#f0f0f0"/> <!-- Use your background color -->
-             </svg>
-        </div>
         <div class="container">
             <h2 class="section-title">Installations chauffe-eau et climatisation</h2>
              <div class="gallery-wrapper">
@@ -307,12 +207,6 @@
                      <img src="/images/realisations/ac2.jpg" alt="Climatisation 2" loading="lazy">
                 </div>
             </div>
-        </div>
-         <!-- Wavy divider bottom - Example using SVG -->
-        <div class="wave-divider wave-bottom">
-            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0 C 144 40, 288 80, 432 80 C 576 80, 720 40, 864 40 C 1008 40, 1152 80, 1296 80 C 1440 80, 1440 0, 1440 0 Z" fill="#f0f0f0"/> <!-- Use your background color -->
-            </svg>
         </div>
     </section>
 
@@ -354,16 +248,10 @@
 
     <!-- BOTTOM CTA / FOOTER SECTION -->
     <section class="section section-bottom-cta">
-        <!-- Wavy divider top - Example using SVG -->
-        <div class="wave-divider wave-top">
-             <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1440 100 C 1296 60, 1152 20, 1008 20 C 864 20, 720 60, 576 60 C 432 60, 288 20, 144 20 C 0 20, 0 100, 0 100 Z" fill="#2a3b70"/> <!-- Use your bottom section background color -->
-             </svg>
-        </div>
         <div class="container">
             <h2>En panne à Clermont-Ferrand, Issoire ou Vic-le-Comte ?</h2>
             <p>J'interviens rapidement à votre domicile dans un rayon de 50 km.</p>
-             <div class="cta-buttons">
+             <div class="bottom-contact-buttons">
                 <a href="tel:0789505069" class="button button-primary">07 89 50 50 69</a>
                 <a href="mailto:vermeauxplomberie@gmail.com" class="button button-secondary">vermeauxplomberie@gmail.com</a>
             </div>

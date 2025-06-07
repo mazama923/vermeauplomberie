@@ -13,10 +13,10 @@
     <div class="flex-l items-center">
       {{ partials.Include "i18nlist.html" . }}
       <ul class="flex flex-wrap justify-center {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
-        {{/* Accueil Link */}}
-        <li class="list f5 f4-ns fw4 dib mh2 {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl0 pr0" "pr0 pl0" }}">
-            <a class="hover-white white no-underline nav-link" href="{{ .Site.Home.RelPermalink }}">Accueil</a>
-        </li>
+        <!-- {{/* Accueil Link */}} -->
+        <!-- <li class="list f5 f4-ns fw4 dib mh2 {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl0 pr0" "pr0 pl0" }}"> -->
+        <!--     <a class="hover-white white no-underline nav-link" href="{{ .Site.Home.RelPermalink }}">Accueil</a> -->
+        <!-- </li> -->
         {{/* A Propos Link */}}
         <li class="list f5 f4-ns fw4 dib mh2 {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl0 pr0" "pr0 pl0" }}">
           <a class="hover-white white no-underline nav-link" href="/a-propos">À propos</a>
