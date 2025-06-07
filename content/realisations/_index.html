@@ -1,0 +1,472 @@
+<style>
+.container {
+    max-width: 1200px; /* Largeur maximale du contenu */
+    margin: 0 auto; /* Centrer le conteneur */
+    padding: 0 20px; /* Ajouter un padding sur les côtés pour les petits écrans */
+}
+
+.section {
+    padding: 60px 0; /* Padding vertical pour chaque section */
+    position: relative; /* Nécessaire pour positionner les vagues SVG */
+}
+
+.section-title {
+    text-align: center;
+    color: #d9534f; /* Couleur rouge/orange */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.section-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* --- Wavy Dividers --- */
+.wave-divider {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden; /* Cache les parties de la vague qui dépassent */
+    line-height: 0; /* Supprime l'espace blanc potentiel sous le SVG */
+    z-index: 1; /* S'assure que la vague est au-dessus de la section précédente/suivante */
+}
+
+.wave-top {
+    top: 0;
+    transform: translateY(-100%); /* Positionne la vague en haut et la remonte pour être entre les sections */
+}
+
+.wave-bottom {
+    bottom: 0;
+    transform: translateY(100%); /* Positionne la vague en bas et la descend pour être entre les sections */
+}
+
+.wave-divider svg {
+    display: block;
+    width: 100%;
+    height: 100px; /* Hauteur de la vague, ajustez si besoin */
+}
+
+/* Note: Les couleurs `fill` des SVG doivent correspondre aux couleurs de fond des sections adjacentes.
+   Dans l'HTML, le fill est mis en `#f0f0f0` (couleur du body) ou `#2a3b70` (couleur du footer). */
+
+
+/* --- Hero Section --- */
+.section-realisations-hero {
+    background-image: url('/images/realisations/hero-background.jpg'); /* Chemin de votre image de fond */
+    background-size: cover; /* Pour couvrir toute la zone */
+    background-position: center;
+    color: white; /* Texte blanc sur l'image sombre */
+    text-align: center;
+    padding: 100px 20px; /* Plus de padding pour l'espace */
+    display: flex; /* Pour centrer le contenu verticalement */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px; /* Hauteur minimale */
+    position: relative; /* Nécessaire pour le z-index et les vagues */
+    z-index: 0; /* S'assure que le contenu est sous la vague du bas si elle est positionnée au-dessus */
+}
+
+.section-realisations-hero .hero-content {
+     position: relative;
+     z-index: 2; /* Met le contenu au-dessus de l'image de fond et des vagues */
+}
+
+
+.section-realisations-hero h1 {
+    color: white; /* Assurez-vous que le titre est blanc */
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.section-realisations-hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+/* --- Call to Action Buttons (General Style) --- */
+.cta-buttons {
+    display: flex;
+    justify-content: center; /* Centre les boutons */
+    gap: 20px; /* Espace entre les boutons */
+    flex-wrap: wrap; /* Permet aux boutons de s'enrouler sur les petits écrans */
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Transition pour l'effet hover */
+    border: 2px solid transparent; /* Ajoute une bordure transparente pour éviter les sauts de mise en page au survol */
+}
+
+.button-primary {
+    background-color: #d9534f; /* Orange/Rouge */
+    color: white;
+    border-color: #d9534f;
+}
+
+.button-secondary {
+     background-color: rgba(255, 255, 255, 0.2); /* Fond semi-transparent */
+     color: white;
+     border-color: white;
+}
+
+/* --- Button Hover Effect (Roll Hover basic) --- */
+.button-primary:hover {
+    background-color: white;
+    color: #d9534f; /* Le texte devient orange/rouge */
+    border-color: #d9534f;
+    /* transform: translateY(-2px); -- Exemple d'un léger déplacement */
+}
+
+.button-secondary:hover {
+     background-color: white;
+     color: #2a3b70; /* Le texte devient bleu foncé */
+     border-color: white;
+     /* transform: translateY(-2px); */
+}
+
+
+/* --- Gallery Sections --- */
+.section-gallery {
+    padding-top: 80px; /* Ajuster le padding pour laisser de la place à la vague supérieure */
+    padding-bottom: 80px; /* Ajuster le padding pour laisser de la place à la vague inférieure */
+    background-color: #f0f0f0; /* Couleur de fond claire pour la section */
+    position: relative;
+    z-index: 0;
+}
+
+.gallery-wrapper {
+    overflow-x: auto; /* Permet le défilement horizontal si le contenu dépasse */
+    -webkit-overflow-scrolling: touch; /* Améliore le défilement sur les appareils tactiles */
+     margin: 0 -20px; /* Compense le padding du container pour les images qui vont jusqu'aux bords */
+     padding: 0 20px; /* Ajoute un padding pour voir le début et la fin des images */
+}
+
+.gallery-container {
+    display: flex; /* Affiche les images en ligne */
+    gap: 20px; /* Espace entre les images */
+    /* white-space: nowrap; /* Optionnel: empêche le retour à la ligne, combiné avec overflow-x */
+    padding-bottom: 15px; /* Espace pour la scrollbar sur certains OS */
+}
+
+.gallery-container img {
+    display: block; /* Important pour enlever l'espace sous l'image */
+    height: 300px; /* Hauteur fixe pour les images de la galerie, ajustez si besoin */
+    width: auto; /* Laissez la largeur s'adapter pour maintenir les proportions */
+    object-fit: cover; /* Important: Coupe l'image pour remplir la taille spécifiée sans déformer */
+    /* Si vous voulez voir l'image entière même si elle est plus petite, utilisez object-fit: contain;
+       Mais "cover" donne souvent un meilleur look pour les galeries où les images ont des orientations variées. */
+    border-radius: 8px; /* Coins arrondis comme dans le design */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    flex-shrink: 0; /* Empêche les images de rétrécir */
+}
+
+/* --- Testimonials Section --- */
+.section-testimonials {
+    background-color: #f0f0f0; /* Couleur de fond claire */
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center; /* Centre les cartes */
+    gap: 30px; /* Espace entre les cartes */
+    flex-wrap: wrap; /* Permet aux cartes de passer à la ligne sur les petits écrans */
+}
+
+.testimonial-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px; /* Largeur maximale pour chaque carte */
+    flex: 1 1 280px; /* Flex-grow, flex-shrink, flex-basis - permet aux cartes de grandir un peu mais pas trop et d'avoir une base de 280px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Rendre l'image ronde */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #d9534f; /* Bordure orange autour de l'avatar */
+}
+
+.testimonial-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.testimonial-rating {
+    color: #ffc107; /* Couleur jaune pour les étoiles */
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.testimonial-quote {
+    font-style: italic;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+/* --- Bottom CTA Section --- */
+.section-bottom-cta {
+    background-color: #2a3b70; /* Bleu foncé */
+    color: white;
+    text-align: center;
+    padding: 80px 20px 60px 20px; /* Ajuster le padding pour la vague supérieure */
+    position: relative;
+    z-index: 0;
+    /* Ajoutez background-image si vous avez le motif de fond */
+    /* background-image: url('/images/realisations/bottom-pattern.png'); */
+    /* background-repeat: repeat; */
+    /* background-size: auto; */
+}
+
+.section-bottom-cta h2 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.section-bottom-cta p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Specific button style if needed for this section, otherwise uses general .button styles */
+.section-bottom-cta .button-primary {
+     /* Peut-être inverser les couleurs ou ajuster si besoin */
+     background-color: #d9534f; /* Orange */
+     color: white;
+     border-color: #d9534f;
+}
+
+.section-bottom-cta .button-secondary {
+    background-color: white; /* Bouton blanc sur fond bleu */
+    color: #2a3b70; /* Texte bleu */
+    border-color: white;
+}
+
+.section-bottom-cta .button-primary:hover {
+    background-color: transparent;
+    color: #d9534f;
+    border-color: #d9534f;
+}
+
+.section-bottom-cta .button-secondary:hover {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+
+/* --- Basic Responsiveness (adjust break points as needed) --- */
+@media (max-width: 768px) {
+    .section {
+        padding: 40px 0; /* Moins de padding sur mobile */
+    }
+
+     .section-hero {
+         padding: 80px 20px;
+     }
+
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    .section-description {
+        font-size: 1em;
+    }
+
+    .cta-buttons {
+        flex-direction: column; /* Empile les boutons verticalement */
+        gap: 15px;
+    }
+
+    .button {
+        width: 80%; /* Les boutons prennent plus de largeur */
+        margin: 0 auto; /* Centrer les boutons */
+    }
+
+    .gallery-container img {
+        height: 200px; /* Hauteur d'image réduite sur mobile */
+    }
+
+    .testimonials-container {
+        flex-direction: column; /* Empile les témoignages */
+        align-items: center;
+    }
+
+    .testimonial-card {
+        width: 90%; /* Les cartes prennent plus de largeur */
+        max-width: none; /* Enlève la limite de largeur */
+    }
+
+     .wave-divider svg {
+        height: 50px; /* Hauteur des vagues réduite sur mobile */
+     }
+}
+</style>
+
+<div class="realisations-page-container">
+
+    <!-- HERO SECTION -->
+    <section class="section section-hero section-realisations-hero">
+        <div class="hero-background">
+            <!-- L'image de fond sera gérée par CSS -->
+        </div>
+        <div class="hero-content">
+            <h1>Mes réalisations</h1>
+            <p>Des projets concrets pour des clients satisfaits.</p>
+            <div class="cta-buttons">
+                <a href="tel:0789505069" class="button button-primary">07 89 50 50 69</a>
+                <a href="mailto:vermeauxplomberie@gmail.com" class="button button-secondary">vermeauxplomberie@gmail.com</a>
+            </div>
+        </div>
+        <!-- Wavy divider bottom - Example using SVG -->
+        <div class="wave-divider wave-bottom">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0 C 144 40, 288 80, 432 80 C 576 80, 720 40, 864 40 C 1008 40, 1152 80, 1296 80 C 1440 80, 1440 0, 1440 0 Z" fill="#f0f0f0"/> <!-- Use your background color -->
+            </svg>
+        </div>
+    </section>
+
+    <!-- SAVOIR-FAIRE SECTION -->
+    <section class="section section-savoir-faire">
+        <div class="container">
+            <h2 class="section-title">Un aperçu de mon savoir-faire</h2>
+            <p class="section-description">Chaque chantier est unique, qu'il s'agisse d'une installation complète, d'une rénovation de salle de bains ou d'un dépannage rapide. Voici quelques exemples de réalisations concrètes, menées avec soin, selon les besoins de chacun.</p>
+        </div>
+    </section>
+
+    <!-- BATHROOM RENOVATIONS SECTION -->
+    <section class="section section-gallery section-bathroom-renovations">
+         <!-- Wavy divider top - Example using SVG -->
+        <div class="wave-divider wave-top">
+             <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1440 100 C 1296 60, 1152 20, 1008 20 C 864 20, 720 60, 576 60 C 432 60, 288 20, 144 20 C 0 20, 0 100, 0 100 Z" fill="#f0f0f0"/> <!-- Use your background color -->
+             </svg>
+        </div>
+        <div class="container">
+            <h2 class="section-title">Rénovations de salle de bain personnalisées</h2>
+            <div class="gallery-wrapper">
+                <div class="gallery-container">
+                    <!-- Replace with your bathroom images -->
+                    <img src="/images/realisations/bathroom1.jpg" alt="Salle de bain 1" loading="lazy">
+                    <img src="/images/realisations/bathroom2.jpg" alt="Salle de bain 2" loading="lazy">
+                    <img src="/images/realisations/bathroom3.jpg" alt="Salle de bain 3" loading="lazy">
+                    <!-- Add more images as needed -->
+                     <img src="/images/realisations/bathroom4.jpg" alt="Salle de bain 4" loading="lazy">
+                     <img src="/images/realisations/bathroom5.jpg" alt="Salle de bain 5" loading="lazy">
+                </div>
+            </div>
+        </div>
+         <!-- Wavy divider bottom - Example using SVG -->
+        <div class="wave-divider wave-bottom">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0 C 144 40, 288 80, 432 80 C 576 80, 720 40, 864 40 C 1008 40, 1152 80, 1296 80 C 1440 80, 1440 0, 1440 0 Z" fill="#f0f0f0"/> <!-- Use your background color -->
+            </svg>
+        </div>
+    </section>
+
+    <!-- HEATING/COOLING INSTALLATIONS SECTION -->
+    <section class="section section-gallery section-installations">
+         <!-- Wavy divider top - Example using SVG -->
+        <div class="wave-divider wave-top">
+             <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1440 100 C 1296 60, 1152 20, 1008 20 C 864 20, 720 60, 576 60 C 432 60, 288 20, 144 20 C 0 20, 0 100, 0 100 Z" fill="#f0f0f0"/> <!-- Use your background color -->
+             </svg>
+        </div>
+        <div class="container">
+            <h2 class="section-title">Installations chauffe-eau et climatisation</h2>
+             <div class="gallery-wrapper">
+                <div class="gallery-container">
+                    <!-- Replace with your heating/cooling images -->
+                    <img src="/images/realisations/heating1.jpg" alt="Chauffe-eau 1" loading="lazy">
+                    <img src="/images/realisations/heating2.jpg" alt="Chauffe-eau 2" loading="lazy">
+                    <img src="/images/realisations/ac1.jpg" alt="Climatisation 1" loading="lazy">
+                     <!-- Add more images as needed -->
+                     <img src="/images/realisations/heating3.jpg" alt="Chauffe-eau 3" loading="lazy">
+                     <img src="/images/realisations/ac2.jpg" alt="Climatisation 2" loading="lazy">
+                </div>
+            </div>
+        </div>
+         <!-- Wavy divider bottom - Example using SVG -->
+        <div class="wave-divider wave-bottom">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0 C 144 40, 288 80, 432 80 C 576 80, 720 40, 864 40 C 1008 40, 1152 80, 1296 80 C 1440 80, 1440 0, 1440 0 Z" fill="#f0f0f0"/> <!-- Use your background color -->
+            </svg>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="section section-testimonials">
+        <div class="container">
+            <h2 class="section-title">Témoignages</h2>
+            <div class="testimonials-container">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <img src="/images/realisations/avatar1.jpg" alt="Bruno Randou" class="testimonial-avatar" loading="lazy">
+                    <p class="testimonial-name">Bruno Randou</p>
+                    <div class="testimonial-rating">
+                        ★★★★★ <!-- Replace with icons if possible -->
+                    </div>
+                    <p class="testimonial-quote">"Artisan que je conseille les yeux fermés. Rénovation salle de bain dans appartement nouvel acquis. Devis respecté. De bon conseil pendant les travaux. Chantier laissé propre chaque jour. Détermine."</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                     <img src="/images/realisations/avatar2.jpg" alt="Sylvie Chantri" class="testimonial-avatar" loading="lazy">
+                    <p class="testimonial-name">Sylvie Chantri</p>
+                     <div class="testimonial-rating">
+                        ★★★★★
+                    </div>
+                    <p class="testimonial-quote">"Artisan discret au travail,très soigneux et qui a complètement répondu à nos attentes. Respect également des délais de réalisation. Très satisfaite"</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                     <img src="/images/realisations/avatar3.jpg" alt="Driss Ben" class="testimonial-avatar" loading="lazy">
+                    <p class="testimonial-name">Driss Ben</p>
+                     <div class="testimonial-rating">
+                        ★★★★★
+                    </div>
+                    <p class="testimonial-quote">"Professionnel sympathique très sérieux, ponctuel et à l'écoute. Très bon travail réalisé dans les délais."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM CTA / FOOTER SECTION -->
+    <section class="section section-bottom-cta">
+        <!-- Wavy divider top - Example using SVG -->
+        <div class="wave-divider wave-top">
+             <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1440 100 C 1296 60, 1152 20, 1008 20 C 864 20, 720 60, 576 60 C 432 60, 288 20, 144 20 C 0 20, 0 100, 0 100 Z" fill="#2a3b70"/> <!-- Use your bottom section background color -->
+             </svg>
+        </div>
+        <div class="container">
+            <h2>En panne à Clermont-Ferrand, Issoire ou Vic-le-Comte ?</h2>
+            <p>J'interviens rapidement à votre domicile dans un rayon de 50 km.</p>
+             <div class="cta-buttons">
+                <a href="tel:0789505069" class="button button-primary">07 89 50 50 69</a>
+                <a href="mailto:vermeauxplomberie@gmail.com" class="button button-secondary">vermeauxplomberie@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+</div>

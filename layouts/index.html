@@ -10,7 +10,7 @@
     --color-light-grey: #F2F2F2; /* Based on the image background */
     --color-light-blue-card: #E6F0FF; /* Based on the service card background */
      /* Add texture background variable */
-    --texture-image: url('/img/texture/texture.png'); /* Path to your texture image */
+    --texture-image: url('/img/texture/textur.png'); /* Path to your texture image */
   }
 
   /* Apply fonts */
@@ -22,7 +22,9 @@
 
   /* Hero Section Styles */
   .hero-section {
-    background-image: url('/img/accueil/hero-background.png'); /* Your hero background with wave */
+    background-image:
+      url('/img/accueil/hero-background.png'),
+      var(--texture-image);
     background-size: cover;
     background-position: center bottom; /* Position to show the wave at the bottom */
     color: white;
@@ -88,7 +90,7 @@
 
   /* Section "Votre artisan plombier du Puy-de-Dôme" */
   .artisan-section {
-      background-color: var(--color-light-grey);
+      <!-- background-color: var(--color-light-grey); -->
       background-image: var(--texture-image);
       background-repeat: repeat;
       padding: 4rem 1rem; /* Padding top/bottom and horizontal */
@@ -151,7 +153,7 @@
 
   /* Services Section */
   .services-section {
-      background-color: var(--color-light-grey); /* Continues from previous */
+      <!-- background-color: var(--color-light-grey); /* Continues from previous */ -->
       background-image: var(--texture-image);
       background-repeat: repeat;
       padding: 4rem 1rem;
@@ -215,7 +217,7 @@
 
   /* Testimonials Section */
   .testimonials-section {
-       background-color: var(--color-light-grey); /* Continues from previous */
+       <!-- background-color: var(--color-light-grey); /* Continues from previous */ -->
        background-image: var(--texture-image);
        background-repeat: repeat;
        padding: 4rem 1rem;
@@ -286,7 +288,9 @@
 
   /* Final Section */
   .final-section {
-    background-image: url('/img/accueil/final-background.png'); /* Your final background with wave */
+    background-image: 
+      url('/img/bottom-background.png'),
+      var(--texture-image);
     background-size: cover;
     background-position: center top; /* Position to show the wave at the top */
     color: white;
