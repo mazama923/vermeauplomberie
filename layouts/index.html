@@ -2,17 +2,6 @@
 
 {{/* Add custom styles for this page */}}
 <style>
-  /* Define your colors as CSS variables */
-  :root {
-    --color-blue: #2A306F;
-    --color-orange: #E64011;
-    --color-white: #FFFFFF;
-    --color-light-grey: #F2F2F2; /* Based on the image background */
-    --color-light-blue-card: #E6F0FF; /* Based on the service card background */
-     /* Add texture background variable */
-    --texture-image: url('/img/texture/textur.png'); /* Path to your texture image */
-  }
-
   /* Apply fonts */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
@@ -23,7 +12,7 @@
   /* Hero Section Styles */
   .hero-section {
     background-image:
-      url('/img/accueil/hero-background.png'),
+      url('/img/hero-background.png'),
       var(--texture-image);
     background-size: cover;
     background-position: center bottom; /* Position to show the wave at the bottom */
@@ -69,24 +58,6 @@
        color: white;
        font-weight: 400;
    }
-
-  .hero-buttons a {
-    background-color: var(--color-orange);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 700;
-    margin: 0.5rem;
-    display: inline-block; /* Allow margin and side-by-side on larger screens */
-    transition: background-color 0.3s ease;
-     border: 1px solid var(--color-orange); /* Add border for consistency */
-  }
-
-  .hero-buttons a:hover {
-    background-color: #CC370D; /* Slightly darker orange */
-    border-color: #CC370D;
-  }
 
   /* Section "Votre artisan plombier du Puy-de-Dôme" */
   .artisan-section {
@@ -330,50 +301,6 @@
        color: white;
        font-weight: 400;
    }
-
-   /* Reuse hero button styles */
-   .final-buttons a {
-       background-color: var(--color-orange);
-       color: white;
-       padding: 0.75rem 1.5rem;
-       border-radius: 4px;
-       text-decoration: none;
-       font-weight: 700;
-       margin: 0.5rem;
-       display: inline-block;
-       transition: background-color 0.3s ease;
-       border: 1px solid var(--color-orange);
-   }
-
-   .final-buttons a:hover {
-       background-color: #CC370D;
-       border-color: #CC370D;
-   }
-
-   /* Responsive adjustments for button stacking */
-   @media (max-width: 600px) {
-       .hero-buttons a, .final-buttons a {
-           display: block; /* Stack buttons on very small screens */
-           width: calc(100% - 1rem); /* Adjust width minus margin */
-           margin-left: 0.5rem;
-           margin-right: 0.5rem;
-       }
-        .artisan-left, .artisan-right {
-            padding: 1rem 0; /* Adjust padding on small screens */
-        }
-        .testimonial-card {
-            max-width: 100%; /* Allow cards to take full width on small screens */
-        }
-         .artisan-title, .services-title, .testimonials-title, .final-title {
-             font-size: 2rem; /* Slightly reduce title size on small screens */
-         }
-          .artisan-number {
-              font-size: 3rem; /* Reduce large number size on small screens */
-          }
-
-   }
-
-
 </style>
 
 {{/* Hero Section */}}
@@ -383,11 +310,9 @@
     <div class="hero-content">
         <h1 class="hero-title">Verm'eau Plomberie,<br>des solutions qui coulent de source !</h1>
         <p class="hero-subtitle">Des services de plomberie fiables et professionnels pour tous vos besoins domestiques.</p>
-        <div class="hero-buttons">
-            {{/* Phone Button */}}
-            <a href="tel:0789500369">07 89 50 03 69</a>
-            {{/* Email Button */}}
-            <a href="mailto:vermeauplomberie@gmail.com">vermeauplomberie@gmail.com</a>
+        <div class="hero-contact-buttons">
+            <a class="btn button-primary" href="tel:0789500369">07 89 50 03 69</a>
+            <a class="btn button-secondary" href="mailto:vermeauplomberie@gmail.com">vermeauplomberie@gmail.com</a>
         </div>
     </div>
 </section>
@@ -454,9 +379,6 @@
                 <h3 class="service-card-title">Installation de plomberie</h3>
                 <p class="service-card-description">J'installe votre plomberie avec soin, pour un résultat fiable, durable et conforme à vos besoins.</p>
             </div>
-
-            {{/* Add more service cards as needed, following the same structure */}}
-
         </div>
     </div>
 </section>
@@ -465,56 +387,38 @@
 <section class="testimonials-section">
      <div class="testimonials-content">
         <h2 class="testimonials-title">Témoignages</h2>
-
         <div class="testimonials-grid">
-            {{/* Testimonial Card Example 1 */}}
             <div class="testimonial-card">
-                {{/* Replace with actual testimonial image */}}
                 <img src="/img/testimonial/bruno.png" alt="Photo client 1">
                 <div class="testimonial-name">Bruno Randon</div>
                 <div class="testimonial-stars">★★★★★</div> {{/* Using Unicode stars */}}
                 <p class="testimonial-quote">"Artisan que je conseille les yeux fermés. Rénovation salle de bain dans appartement. Travail soigné. Devis respecté. De bon conseils pendant les travaux. Chantier laissé propre chaque jour. Délais tenus."</p>
             </div>
-
-             {{/* Testimonial Card Example 2 */}}
             <div class="testimonial-card">
-                {{/* Replace with actual testimonial image */}}
                 <img src="/img/testimonial/sylvie.png" alt="Photo client 2">
                 <div class="testimonial-name">Sylvie Chante</div> {{/* Corrected name based on image */}}
                 <div class="testimonial-stars">★★★★★</div>
                 <p class="testimonial-quote">"Artisan discret au travail, très soigneux et qui a complètement répondu à nos attentes. Respect absolument des délais de réalisation. Très satisfaite !"</p>
             </div>
-
-             {{/* Testimonial Card Example 3 */}}
             <div class="testimonial-card">
-                {{/* Replace with actual testimonial image */}}
                 <img src="/img/testimonial/drine.png" alt="Photo client 3">
                 <div class="testimonial-name">Drine Ben</div>
                 <div class="testimonial-stars">★★★★★</div>
                 <p class="testimonial-quote">"Professionnel sympathique, très sérieux, ponctuel et efficace. Très bon travail réalisé dans les délais !"</p>
             </div>
-
-            {{/* Add more testimonial cards as needed, following the same structure */}}
-
         </div>
      </div>
 </section>
 
 {{/* Final Section */}}
 <section class="final-section">
-    {{/* Optional Overlay */}}
-    {{/* <div class="hero-overlay"></div> */}} {{/* If you need an overlay here too */}}
     <div class="final-content">
         <h2 class="final-title">En panne à Clermont-Ferrand, Issoire ou Vic-le-Comte ?</h2>
         <p class="final-subtitle">J'interviens rapidement à votre domicile dans un rayon de 50 km.</p>
-        <div class="final-buttons">
-             {{/* Phone Button (reuse styles) */}}
-            <a href="tel:0789500369">07 89 50 03 69</a>
-            {{/* Email Button (reuse styles) */}}
-            <a href="mailto:vermeauplomberie@gmail.com">vermeauplomberie@gmail.com</a>
+        <div class="bottom-contact-buttons">
+            <a class="btn button-primary" href="tel:0789500369">07 89 50 03 69</a>
+            <a class="btn button-secondary" href="mailto:vermeauplomberie@gmail.com">vermeauplomberie@gmail.com</a>
         </div>
     </div>
 </section>
-
-
 {{ end }}

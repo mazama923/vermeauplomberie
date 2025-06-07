@@ -1,5 +1,16 @@
 /* Exemple: <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}"> */
 
+/* Define your colors as CSS variables */
+:root {
+  --color-blue: #2A306F;
+  --color-orange: #E64011;
+  --color-white: #FFFFFF;
+  --color-light-grey: #F2F2F2; /* Based on the image background */
+  --color-light-blue-card: #E6F0FF; /* Based on the service card background */
+  --texture-image: url('/img/texture/textur.png'); /* Path to your texture image */
+  }
+
+
 /* fonts */
 body {
   font-family: 'Lato', sans-serif;
@@ -95,20 +106,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-.btn-primary {
-  background-color: #ff6600; /* Exemple de couleur orange */
-  color: white;
-  border: 1px solid #ff6600;
-}
-
-.btn-secondary {
-  background-color: rgba(255, 255, 255, 0.2); /* Exemple de couleur semi-transparente */
-  /* background-color: #ff6600; /* Exemple de couleur orange */ */
-  color: #ff6600;
-  border: 2px solid #ff6600;
-}
-
-
 /* Styles pour la boîte d'informations (info-box) */
 .info-box {
   background-color: white; /* Fond blanc pour la boîte */
@@ -179,6 +176,32 @@ h1, h2, h3, h4, h5, h6 {
     color: #ff6600; /* Couleur du numéro (orange) */
 }
 
+/* --- Bottom --- */
+.button-primary {
+     background-color: var(--color-orange);
+     color: var(--color-white);
+     border-color: var(--color-orange:);
+     border: 2px solid transparent;
+}
+
+.button-secondary {
+    background-color: var(--color-white);
+    color: var(--color-blue);
+    border-color: var(--color-white);
+    border: 2px solid transparent; /* Pour garder la bordure lors du hover */
+}
+
+.button-primary:hover {
+    background-color: transparent;
+    color: var(--color-orange);
+    border-color: var(--color-orange);
+}
+
+.button-secondary:hover {
+    background-color: transparent;
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
 
 /* Styles pour la section Appel à l'Action du Bas */
 .bottom-cta-section {
@@ -226,5 +249,51 @@ h1, h2, h3, h4, h5, h6 {
   }
   .info-box-icon {
     align-self: center; /* Centre l'icône empilée */
+  }
+  .section {
+      padding: 40px 0; /* Moins de padding sur mobile */
+  }
+  .section-hero {
+       padding: 80px 20px;
+   }
+  .section-title {
+      font-size: 1.8em;
+  }
+  .section-description {
+      font-size: 1em;
+  }
+  .cta-buttons {
+      flex-direction: column; /* Empile les boutons verticalement */
+      gap: 15px;
+  }
+  .button {
+      width: 80%; /* Les boutons prennent plus de largeur */
+      margin: 0 auto; /* Centrer les boutons */
+  }
+  .gallery-container img {
+      height: 200px; /* Hauteur d'image réduite sur mobile */
+  }
+  .testimonials-container {
+      flex-direction: column; /* Empile les témoignages */
+      align-items: center;
+  }
+  .testimonial-card {
+      width: 90%; /* Les cartes prennent plus de largeur */
+      max-width: none; /* Enlève la limite de largeur */
+  }
+  .wave-divider svg {
+    height: 50px; /* Hauteur des vagues réduite sur mobile */
+  }
+  .artisan-left, .artisan-right {
+    padding: 1rem 0; /* Adjust padding on small screens */
+  }
+  .testimonial-card {
+    max-width: 100%; /* Allow cards to take full width on small screens */
+  }
+  .artisan-title, .services-title, .testimonials-title, .final-title {
+    font-size: 2rem; /* Slightly reduce title size on small screens */
+  }
+  .artisan-number {
+    font-size: 3rem; /* Reduce large number size on small screens */
   }
 }

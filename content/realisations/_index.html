@@ -57,7 +57,7 @@
 
 /* --- Hero Section --- */
 .section-realisations-hero {
-    background-image: url('/images/realisations/hero-background.jpg'); /* Chemin de votre image de fond */
+    background-image: url('/img/hero-background.png'); /* Chemin de votre image de fond */
     background-size: cover; /* Pour couvrir toute la zone */
     background-position: center;
     color: white; /* Texte blanc sur l'image sombre */
@@ -223,105 +223,6 @@
     line-height: 1.5;
 }
 
-
-/* --- Bottom CTA Section --- */
-.section-bottom-cta {
-    background-color: #2a3b70; /* Bleu foncé */
-    color: white;
-    text-align: center;
-    padding: 80px 20px 60px 20px; /* Ajuster le padding pour la vague supérieure */
-    position: relative;
-    z-index: 0;
-    /* Ajoutez background-image si vous avez le motif de fond */
-    /* background-image: url('/images/realisations/bottom-pattern.png'); */
-    /* background-repeat: repeat; */
-    /* background-size: auto; */
-}
-
-.section-bottom-cta h2 {
-    color: white;
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-.section-bottom-cta p {
-    font-size: 1.1em;
-    margin-bottom: 30px;
-}
-
-/* Specific button style if needed for this section, otherwise uses general .button styles */
-.section-bottom-cta .button-primary {
-     /* Peut-être inverser les couleurs ou ajuster si besoin */
-     background-color: #d9534f; /* Orange */
-     color: white;
-     border-color: #d9534f;
-}
-
-.section-bottom-cta .button-secondary {
-    background-color: white; /* Bouton blanc sur fond bleu */
-    color: #2a3b70; /* Texte bleu */
-    border-color: white;
-}
-
-.section-bottom-cta .button-primary:hover {
-    background-color: transparent;
-    color: #d9534f;
-    border-color: #d9534f;
-}
-
-.section-bottom-cta .button-secondary:hover {
-    background-color: transparent;
-    color: white;
-    border-color: white;
-}
-
-
-/* --- Basic Responsiveness (adjust break points as needed) --- */
-@media (max-width: 768px) {
-    .section {
-        padding: 40px 0; /* Moins de padding sur mobile */
-    }
-
-     .section-hero {
-         padding: 80px 20px;
-     }
-
-    .section-title {
-        font-size: 1.8em;
-    }
-
-    .section-description {
-        font-size: 1em;
-    }
-
-    .cta-buttons {
-        flex-direction: column; /* Empile les boutons verticalement */
-        gap: 15px;
-    }
-
-    .button {
-        width: 80%; /* Les boutons prennent plus de largeur */
-        margin: 0 auto; /* Centrer les boutons */
-    }
-
-    .gallery-container img {
-        height: 200px; /* Hauteur d'image réduite sur mobile */
-    }
-
-    .testimonials-container {
-        flex-direction: column; /* Empile les témoignages */
-        align-items: center;
-    }
-
-    .testimonial-card {
-        width: 90%; /* Les cartes prennent plus de largeur */
-        max-width: none; /* Enlève la limite de largeur */
-    }
-
-     .wave-divider svg {
-        height: 50px; /* Hauteur des vagues réduite sur mobile */
-     }
-}
 </style>
 
 <div class="realisations-page-container">
