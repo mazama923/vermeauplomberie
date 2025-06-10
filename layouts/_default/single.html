@@ -1,0 +1,11 @@
+{{ define "main" }}
+  {{ partial "hero-service.html" . }}
+  <section class="service-content-area">
+    <div class="container pv4">
+      <h2 class="service-main-title">{{ .Title }}</h2>
+      <p class="service-main-subtitle">{{ .Params.subtitle }}</p>
+      {{ partial "info-box.html" . }}
+    </div>
+  </section>
+  {{ partial "bottom-cta-service.html" . }}
+{{ end }}

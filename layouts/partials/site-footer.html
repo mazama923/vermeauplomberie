@@ -1,0 +1,62 @@
+{{ $footerBgColor := "#282828" }}
+
+<footer class="w-100 pa3 pt4" role="contentinfo" style="background-color: {{ $footerBgColor }};">
+  <div class="center ph3" style="max-width: 1200px;">
+
+    <div class="flex flex-wrap justify-between pb4">
+
+      {{/* Column 1: Logo and Site Name */}}
+      <div class="w-100 w-third-l pa2 tl">
+        <a class="f4 fw4 hover-white white-70 dib pv2 no-underline flex items-center" href="{{ .Site.Home.RelPermalink }}">
+          {{ with .Site.Params.site_logo }}
+            <img src="{{ . | relURL }}" class="h3 w-auto mr2" alt="{{ $.Site.Title }}" style="filter: brightness(0) invert(1);" />
+          {{ else }}
+            <span class="white f3">{{ .Site.Title }}</span>
+          {{ end }}
+        </a>
+        {{ if not .Site.Params.site_logo }}
+          <span class="db white-70 f6">{{ .Site.Params.description }}</span>
+        {{ end }}
+      </div>
+
+      {{/* Column 2: Contact Information */}}
+      <div class="w-100 w-third-l pa2 tl">
+        <span class="db white f5 fw5 mb2">Contact</span>
+        <span class="db white-70 f6">Du lundi au vendredi</span>
+        <span class="db white-70 f6 mt1">Verm'eau Plomberie</span>
+        <a href="tel:0789500369" class="db white-70 f6 no-underline mt1 hover-white">07 89 50 03 69</a>
+        <a href="mailto:vermeauplomberie@gmail.com" class="db white-70 f6 no-underline mt1 hover-white">vermeauplomberie@gmail.com</a>
+      </div>
+
+      {{/* Column 3: Navigation Links (all with relURL) */}}
+      <div class="w-100 w-third-l pa2 tl">
+        <span class="db white f5 fw5 mb2">Verm'eau Plomberie</span>
+        <ul class="list pl0">
+          <li class="mb1">
+            <a class="white-70 f6 no-underline hover-white" href="{{ .Site.Home.RelPermalink }}">Accueil</a>
+          </li>
+          <li class="mb1">
+            <a class="white-70 f6 no-underline hover-white" href="{{ "a-propos" | relURL }}">A propos</a>
+          </li>
+          <li class="mb1">
+            <a class="white-70 f6 no-underline hover-white" href="{{ "realisations" | relURL }}">Réalisations</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="w-100 bt b--white-10 mv3"></div>
+
+    <div class="flex flex-wrap justify-center justify-between-ns pv3">
+      <div class="pa2 flex items-center">
+        <svg class="mr1" style="display:inline-block; vertical-align:middle;" fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        <a href="https://www.facebook.com/votrepagedefacebook" class="white-70 f6 no-underline hover-white">Verm'eau Plomberie</a>
+      </div>
+      <div class="pa2 tc tl-ns">
+        <span class="white-70 f6">&copy; {{ now.Format "2006" }} {{ with .Site.Copyright | compare.Default .Site.Title }}{{ . | safeHTML }}{{ end }} Tous droits réservés par Verm'eau Plomberie.</span>
+      </div>
+    </div>
+
+  </div>
+</footer>

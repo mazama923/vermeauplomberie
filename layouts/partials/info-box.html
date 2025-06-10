@@ -1,0 +1,68 @@
+<div class="info-box">
+  <div class="info-box-icon">
+    {{ if .Params.info_box_icon }}
+      <img src="{{ .Params.info_box_icon | relURL }}" alt="Icone {{ .Title }}">
+    {{ end }}
+  </div>
+  <div class="info-box-content">
+    {{ if .Params.info_box_intro }}
+      <p>{{ .Params.info_box_intro }}</p><br>
+    {{ end }}
+
+    {{ if .Params.text_libre_0_content }}
+      {{ if .Params.text_libre_0_title }}
+      <h3>{{ .Params.text_libre_0_title }}</h3>
+      {{ end}}
+      <p>{{ .Params.text_libre_0_content }}</p><br>
+    {{ end }}
+
+    {{ if .Params.services_list }}
+      <h3>{{ .Params.services_list_title }}</h3>
+      <ul class="info-box-list">
+        {{ range .Params.services_list }}
+          <li><span class="list-bullet"></span> {{ . }}</li>
+        {{ end }}
+      </ul><br>
+    {{ end }}
+
+    {{ if .Params.steps_list }}
+      {{ if .Params.steps_list_title }}
+      <h3>{{ .Params.steps_list_title }}</h3>
+      {{ end}}
+      <ol class="info-box-steps">
+        {{ range $index, $step := .Params.steps_list }}
+          <li><span class="step-number">{{ add $index 1 }}.</span> {{ $step }}</li>
+        {{ end }}
+      </ol><br>
+    {{ end }}
+
+    {{ if .Params.text_libre_1_content }}
+      {{ if .Params.text_libre_1_title }}
+      <h3>{{ .Params.text_libre_1_title }}</h3>
+      {{ end}}
+      <p>{{ .Params.text_libre_1_content }}</p><br>
+    {{ end }}
+
+    {{ if .Params.services_list_2 }}
+      <h3>{{ .Params.services_list_title_2 }}</h3>
+      <ul class="info-box-list">
+        {{ range .Params.services_list_2 }}
+          <li><span class="list-bullet"></span> {{ . }}</li>
+        {{ end }}
+      </ul><br>
+    {{ end }}
+
+    {{ if .Params.text_libre_2_content }}
+      {{ if .Params.text_libre_2_title }}
+      <h3>{{ .Params.text_libre_2_title }}</h3>
+      {{ end}}
+      <p>{{ .Params.text_libre_2_content }}</p><br>
+    {{ end }}
+
+    {{ if .Params.info_box_inspiration_button_text }}
+    <div class="bottom-contact-buttons">
+      <a href="{{ "realisations" | relURL }}" class="btn button-primary">{{ .Params.info_box_inspiration_button_text }}</a>
+    </div>
+    {{ end }}
+  </div>
+</div>

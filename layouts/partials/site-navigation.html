@@ -1,0 +1,89 @@
+<nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex flex-wrap center items-center justify-center justify-between-ns">
+    {{/* Logo */}}
+    <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white dib no-underline mr3">
+      {{ with .Site.Params.site_logo }}
+        <img src="{{ . | relURL }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
+      {{ else }}
+        {{ .Site.Title }}
+      {{ end }}
+    </a>
+
+    {{/* Navigation Links */}}
+    <div class="flex-l items-center">
+      {{ partial "i18nlist.html" . }}
+      <ul class="flex flex-wrap justify-center {{ if eq $.Site.Language.LanguageDirection "rtl" }}pr0 ml3{{ else }}pl0 mr3{{ end }}">
+        {{/* Accueil Link */}}
+        <li class="list f5 f4-ns fw4 dib mh2 {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl0 pr0{{ else }}pr0 pl0{{ end }}">
+          <a class="hover-white white no-underline nav-link" href="{{ .Site.Home.RelPermalink }}">Accueil</a>
+        </li>
+        {{/* A Propos Link */}}
+        <li class="list f5 f4-ns fw4 dib mh2 {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl0 pr0{{ else }}pr0 pl0{{ end }}">
+          <a class="hover-white white no-underline nav-link" href="{{ "a-propos" | relURL }}">À propos</a>
+        </li>
+        {{/* Services Dropdown */}}
+        <li class="list f5 f4-ns fw4 dib relative dropdown-li mh2 {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl0 pr0{{ else }}pr0 pl0{{ end }}">
+          <a href="#" class="hover-white white no-underline" aria-haspopup="true" aria-expanded="false">
+            Services
+            <svg class="ml1" width="10" height="10" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" style="display: inline-block; vertical-align: middle;">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <ul id="services-dropdown" class="absolute bg-white pa2 shadow-1 dropdown-ul" style="min-width:200px; z-index:100; top: 100%; left: 0;">
+            <li><a class="black no-underline db pv1 ph2 hover-bg-light-gray" href="{{ "services/depannage" | relURL }}">Dépannage</a></li>
+            <li><a class="black no-underline db pv1 ph2 hover-bg-light-gray" href="{{ "services/renovation-salle-de-bain" | relURL }}">Rénovations de salle de bain</a></li>
+            <li><a class="black no-underline db pv1 ph2 hover-bg-light-gray" href="{{ "services/installation-plomberie" | relURL }}">Installation de plomberie</a></li>
+            <li><a class="black no-underline db pv1 ph2 hover-bg-light-gray" href="{{ "services/chauffe-eau" | relURL }}">Chauffe-eau</a></li>
+            <li><a class="black no-underline db pv1 ph2 hover-bg-light-gray" href="{{ "services/climatisation" | relURL }}">Climatisations</a></li>
+          </ul>
+        </li>
+
+        <li class="list f5 f4-ns fw4 dib mh2 {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl0 pr0{{ else }}pr0 pl0{{ end }}">
+          <a class="hover-white white no-underline nav-link" href="{{ "realisations" | relURL }}">Réalisations</a>
+        </li>
+
+        <!-- {{/* Contact Button */}}
+        <li class="list f5 f4-ns fw4 dib mh2 {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl0 pr0{{ else }}pr0 pl0{{ end }}">
+          <a class="white no-underline ba b--white br2 ph3 pv2 btn-contact" href="tel:0789500369">Contactez-moi</a>
+        </li> 
+        -->
+      </ul>
+      {{ partialCached "social/follow.html" . }}
+    </div>
+  </div>
+</nav>
+
+<style>
+/* Hide the dropdown content by default */
+.dropdown-ul {
+  display: none;
+}
+
+/* Show the dropdown content when hovering over the parent list item */
+.dropdown-li:hover .dropdown-ul {
+  display: block;
+}
+
+/* Hover effect for standard navigation links */
+.nav-link:hover {
+  border-bottom: 1px solid #FFFFFF; /* White underline */
+  padding-bottom: 2px; /* Small space between text and underline */
+}
+
+/* Style for the Contact button */
+.btn-contact {
+  background-color: #E64011; /* Your orange */
+  border-color: #E64011; /* Your orange */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+/* Hover effect for the Contact button */
+.btn-contact:hover {
+  background-color: #CC370D; /* A slightly darker orange on hover */
+  border-color: #CC370D; /* Darken border as well */
+}
+
+.dropdown-ul a:hover {
+  color: #2A306F; /* Change text color to blue on hover within dropdown */
+}
+</style>

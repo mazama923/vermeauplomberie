@@ -1,0 +1,558 @@
+/* Exemple: <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}"> */
+
+/* Define your colors as CSS variables */
+:root {
+  --color-blue: #2A306F;
+  --color-orange: #E64011;
+  --color-white: #FFFFFF;
+  --color-light-grey: #F2F2F2;
+  --color-light-blue-card: #F0F8FB;
+  --texture-image: url('/img/texture/textur.png');
+}
+
+/* fonts */
+body, a, p, li {
+  font-family: 'Lato', sans-serif;
+  color: #222;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.pv4 { padding-top: 2rem; padding-bottom: 2rem; }
+.pv5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+/* Main title and subtitle */
+.service-main-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+.service-main-subtitle {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Hero Section Styles */
+.hero-section,
+.hero-service-section {
+  background-size: cover;
+  background-position: center bottom;
+  color: var(--color-white);
+  padding-top: 1rem;
+  padding-bottom: 10rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero-section {
+  background-image:
+    url("../img/hero-background.png"),
+    var(--texture-image);
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+.hero-content,
+.hero-content-wrapper {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-white);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--color-white);
+  font-weight: 400;
+}
+.hero-contact-buttons a,
+.bottom-contact-buttons a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Info box */
+.info-box {
+  background-color: var(--color-light-blue-card);
+  border: 2px solid var(--color-blue);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+.info-box-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+}
+.info-box-icon img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.info-box-content h3 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+}
+.info-box-list,
+.info-box-steps {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.info-box-list li,
+.info-box-steps li {
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+.info-box-list li {
+  padding-left: 1.5rem;
+}
+.list-bullet {
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-orange);
+  border-radius: 50%;
+}
+.info-box-steps li {
+  padding-left: 2rem;
+}
+.step-number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+  color: var(--color-orange);
+}
+
+/* Final Section */
+.final-section {
+  background-image:
+    url("../img/bottom-background.png"),
+    var(--texture-image);
+  background-size: cover;
+  background-position: center top;
+  color: var(--color-white);
+  padding-top: 12rem;
+  padding-bottom: 0;
+  text-align: center;
+  position: relative;
+}
+.final-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  padding-bottom: 4rem;
+}
+.final-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.final-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--color-white);
+  font-weight: 400;
+}
+
+/* Services Section */
+.services-section {
+  background-image: var(--texture-image);
+  background-repeat: repeat;
+  padding: 4rem 1rem;
+}
+.services-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.services-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-orange);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+.services-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Style for the clickable link wrapping the card */
+.service-card-link {
+  /* Make the link a block element to fill the grid item and contain the card div */
+  display: block;
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit text color */
+  cursor: pointer; /* Indicate interactivity */
+
+  /* Optional: Ensure the link takes full height in the grid cell */
+  height: 100%;
+
+  /* Add transition for smooth effects (can be on the link or the inner div) */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  box-sizing: border-box; /* Include padding and border in the link's size if applied directly here */
+
+  /* Apply card styles to the link itself or to the inner div */
+  /* If you apply styles below to .service-card-link, remove them from .service-card */
+  background-color: var(--color-light-blue-card);
+  border: 3px solid var(--color-blue);
+  border-radius: 8px;
+  padding: 2rem; /* Apply padding here or on the inner div */
+  text-align: center; /* Apply text-align here or on the inner div */
+}
+
+
+/* Style for the inner div if needed */
+.service-card {
+  /* If styles like padding, background, border, border-radius, text-align are on .service-card-link, */
+  /* you might only need flex properties here if you want to align content inside the card */
+  height: 100%; /* Make inner div fill the link's height */
+  display: flex; /* Use flexbox to control inner content layout */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Align items from the top */
+  align-items: center; /* Center items horizontally */
+  /* Remove visual styles if they are on .service-card-link */
+   background-color: transparent; /* Prevent double background if on link */
+   border: none; /* Prevent double border if on link */
+   padding: 0; /* Prevent double padding if on link */
+}
+
+
+/* Hover effect for the clickable card link */
+.service-card-link:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  border-color: var(--color-orange); /* Change border color on hover */
+}
+
+/* Style elements inside the card, targeting them through the link */
+.service-card-link img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  /* fill: var(--color-blue); /* This CSS property is for SVG elements, not <img> */
+  /* If using SVG with <svg> tag, you can style fill/stroke */
+}
+
+/* Optional: Change SVG color on card hover (if img is actually an SVG) */
+/* .service-card-link:hover img { */
+  /* Example using filter */
+  /* filter: invert(60%) sepia(80%) saturate(2000%) hue-rotate(30deg) brightness(100%) contrast(90%); */
+/* } */
+
+
+.service-card-link .service-card-title { /* Target title inside the link */
+  font-size: 1.3rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-blue); /* Set base color */
+  transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+.service-card-link:hover .service-card-title { /* Change title color on link hover */
+   color: var(--color-orange);
+}
+
+.service-card-link .service-card-description { /* Target description inside the link */
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  /* Use margin-bottom to push the description if using flexbox on .service-card */
+   margin-bottom: auto; /* Push remaining space below */
+}
+
+/* Artisan Section */
+.artisan-section {
+  background-image: var(--texture-image);
+  background-repeat: repeat;
+  padding: 4rem 1rem;
+}
+
+.artisan-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* Sur mobile (par défaut), les éléments s'empilent grâce à flex-wrap et width: 100% */
+  /* Pas besoin d'align-items ici par défaut si vous voulez l'empilement naturel */
+}
+
+/* Styles par défaut pour mobile (empilés) */
+.artisan-left,
+.artisan-right {
+  width: 100%; /* Sur mobile, chaque élément prend toute la largeur */
+  padding: 1rem;
+  box-sizing: border-box;
+  /* Supprimez les display: flex/column ici si vous les ajoutez dans la media query */
+  display: block; /* Assure un comportement de bloc par défaut sur mobile */
+}
+
+.artisan-right {
+  text-align: left; /* Conserver l'alignement du texte */
+}
+
+/* Styles pour desktop (côte à côte et alignés en haut) */
+@media (min-width: 768px) { /* Applique ces styles pour les écrans d'au moins 768px de large (ou un autre breakpoint de votre choix) */
+  .artisan-content {
+    align-items: stretch; /* Pour que les colonnes aient la même hauteur sur desktop */
+  }
+
+  .artisan-left {
+    width: 60%; /* Sur desktop, la partie gauche prend 60% */
+    display: flex; /* Fait de .artisan-left un conteneur flex */
+    flex-direction: column; /* Empile ses enfants verticalement */
+    justify-content: flex-start; /* Alignement vertical des enfants en haut */
+    align-items: flex-start; /* Alignement horizontal des enfants à gauche */
+  }
+
+  .artisan-right {
+    width: 40%; /* Sur desktop, la partie droite prend 40% */
+    display: flex; /* Fait de .artisan-right un conteneur flex */
+    flex-direction: column; /* Empile ses enfants verticalement */
+    justify-content: flex-start; /* Alignement vertical des enfants en haut */
+    align-items: flex-start; /* Alignement horizontal des enfants à gauche */
+    text-align: left; /* Conserver l'alignement du texte à l'intérieur */
+  }
+}
+
+/* Conserver les autres styles inchangés */
+.artisan-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-blue);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  /* Ajoutez margin-top: 0; si le titre a une marge par défaut que vous voulez annuler */
+  margin-top: 0;
+}
+
+.artisan-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+   /* Ajoutez margin-top: 0; si le paragraphe a une marge par défaut que vous voulez annuler */
+  margin-top: 0;
+}
+
+.artisan-number-container {
+    /* Ajuster si nécessaire pour l'affichage du nombre et label */
+    /* display: flex; flex-direction: column; si vous voulez qu'ils soient l'un sous l'autre */
+    display: block; /* Assure qu'ils s'empilent si besoin sur mobile */
+}
+
+.artisan-number {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4rem;
+  color: var(--color-orange);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.artisan-number-label {
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 700;
+}
+/* Testimonials Section */
+.testimonials-section {
+  background-image: var(--texture-image);
+  background-repeat: repeat;
+  padding: 4rem 1rem;
+  padding-bottom: 8rem;
+}
+.testimonials-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.testimonials-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--color-orange);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+.testimonials-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.testimonial-card {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.testimonial-card img,
+.testimonial-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.testimonial-avatar {
+  margin-bottom: 15px;
+  border: 3px solid var(--color-orange);
+}
+.testimonial-name {
+  font-weight: 700;
+  color: var(--color-blue);
+  margin-bottom: 0.5rem;
+}
+.testimonial-stars {
+  color: var(--color-orange);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.testimonial-quote {
+  font-style: italic;
+  color: #555;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.button-primary {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border-color: var(--color-orange);
+  border: 2px solid transparent;
+}
+.button-secondary {
+  background-color: var(--color-white);
+  color: var(--color-blue);
+  border-color: var(--color-white);
+  border: 2px solid transparent;
+}
+.button-primary:hover {
+  background-color: transparent;
+  color: var(--color-orange);
+  border-color: var(--color-orange);
+}
+.button-secondary:hover {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .info-box {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .info-box-icon {
+    align-self: center;
+  }
+  .section {
+    padding: 40px 0;
+  }
+  .section-hero {
+    padding: 80px 20px;
+  }
+  .section-title {
+    font-size: 1.8em;
+  }
+  .section-description {
+    font-size: 1em;
+  }
+  .button {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .gallery-container img {
+    height: 200px;
+  }
+  .testimonials-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonial-card {
+    width: 90%;
+    max-width: 100%;
+  }
+  .wave-divider svg {
+    height: 50px;
+  }
+  .artisan-left, .artisan-right {
+    padding: 1rem 0;
+  }
+  .artisan-title, .services-title, .testimonials-title, .final-title {
+    font-size: 2rem;
+  }
+  .artisan-number {
+    font-size: 3rem;
+  }
+}

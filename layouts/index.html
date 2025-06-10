@@ -1,0 +1,135 @@
+{{ define "main" }}
+
+<style>
+  /* Apply fonts */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700; /* Oswald often looks good bold */
+    color: var(--color-blue); /* Default heading color */
+  }
+</style>
+
+{{/* Hero Section */}}
+<section class="hero-section">
+    {{/* Optional Overlay */}}
+    {{/* <div class="hero-overlay"></div> */}}
+    <div class="hero-content">
+        <h1 class="hero-title">Verm'eau Plomberie,<br>des solutions qui coulent de source !</h1>
+        <p class="hero-subtitle">Des services de plomberie fiables et professionnels pour tous vos besoins domestiques.</p>
+        <div class="hero-contact-buttons">
+            <a class="btn button-primary" href="tel:0789500369">07 89 50 03 69</a>
+            <a class="btn button-secondary" href="mailto:vermeauplomberie@gmail.com">vermeauplomberie@gmail.com</a>
+        </div>
+    </div>
+</section>
+
+{{/* Section: Votre artisan plombier du Puy-de-Dôme */}}
+<section class="artisan-section">
+    <div class="artisan-content">
+        <div class="artisan-left">
+            <h2 class="artisan-title">Votre artisan plombier du<br>Puy-de-Dôme</h2>
+        </div>
+        <div class="artisan-right">
+            <p class="artisan-description">Besoin d'un plombier de confiance ? J'interviens rapidement pour garantir confort et durabilité. Qualité, réactivité et transparence sont mes priorités.</p>
+            <div class="artisan-number-container">
+                <div class="artisan-number">5</div>
+                <div class="artisan-number-label">Domaines d’intervention pour tous vos besoins</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/* Services Section */}}
+<section class="services-section">
+    <div class="services-content">
+        <h2 class="services-title">Services</h2>
+        <p class="services-subtitle">Un accompagnement fiable et sur mesure pour tous vos travaux de plomberie.</p>
+
+        <div class="services-grid">
+            {{/* Service Card Example 1: Dépannage */}}
+            <a href="{{ "services/depannage" | relURL }}" class="service-card-link"> 
+            <div class="service-card">
+                <img src="{{ "icons/depannage.svg" | relURL }}" alt="Icône Dépannage">
+                <h3 class="service-card-title">Dépannage</h3>
+                <p class="service-card-description">Fuite, bouchon ou robinet défectueux ? J'interviens rapidement pour diagnostiquer et réparer avec fiabilité.</p>
+            </div>
+            </a>
+
+            {{/* Service Card Example 2: Rénovations */}}
+            <a href="{{ "services/renovation-salle-de-bain" | relURL }}" class="service-card-link"> 
+             <div class="service-card">
+                <img src="{{ "icons/renovation.svg" | relURL }}" alt="Icône Rénovation">
+                <h3 class="service-card-title">Rénovations de salle de bains personnalisées</h3>
+                <p class="service-card-description">Je vous aide à créer une salle de bain pratique, esthétique et qui vous ressemble.</p>
+            </div>
+            </a>
+
+             {{/* Service Card Example 3: Chauffe-eau */}}
+            <a href="{{ "services/chauffe-eau" | relURL }}" class="service-card-link"> 
+             <div class="service-card">
+                <img src="{{ "icons/chauffe-eau.svg" | relURL }}" alt="Icône Chauffe-eau">
+                <h3 class="service-card-title">Chauffe-eau</h3>
+                <p class="service-card-description">Installation et dépannage de chauffe-eau et chauffage, pour un confort assuré toute l'année.</p>
+            </div>
+            </a>
+
+             {{/* Service Card Example 4: Climatisation */}}
+            <a href="{{ "services/climatisation" | relURL }}" class="service-card-link"> 
+             <div class="service-card">
+                <img src="{{ "icons/climatisation.svg" | relURL }}" alt="Icône Climatisation">
+                <h3 class="service-card-title">Climatisation</h3>
+                <p class="service-card-description">Climatisation l'été, chauffage l'hiver. Profitez d'une pompe à chaleur air-air adaptée à vos besoins.</p>
+            </div>
+            </a>
+
+             {{/* Service Card Example 5: Installation */}}
+            <a href="{{ "services/installation-plomberie" | relURL }}" class="service-card-link"> 
+             <div class="service-card">
+                <img src="{{ "icons/installation.svg" | relURL }}" alt="Icône Installation">
+                <h3 class="service-card-title">Installation de plomberie</h3>
+                <p class="service-card-description">J'installe votre plomberie avec soin, pour un résultat fiable, durable et conforme à vos besoins.</p>
+            </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+{{/* Testimonials Section */}}
+<section class="testimonials-section">
+     <div class="testimonials-content">
+        <h2 class="testimonials-title">Témoignages</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <img src="{{ "img/testimonial/bruno.png" | relURL }}" alt="Photo client 1" class="testimonial-avatar">
+                <div class="testimonial-name">Bruno Randon</div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Artisan que je conseille les yeux fermés. Rénovation salle de bain dans appartement. Travail soigné. Devis respecté. De bon conseils pendant les travaux. Chantier laissé propre chaque jour. Délais tenus."</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="{{ "img/testimonial/sylvie.png" | relURL }}" alt="Photo client 2" class="testimonial-avatar">
+                <div class="testimonial-name">Sylvie Chante</div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Artisan discret au travail, très soigneux et qui a complètement répondu à nos attentes. Respect absolument des délais de réalisation. Très satisfaite !"</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="{{ "img/testimonial/drine.png" | relURL }}" alt="Photo client 3" class="testimonial-avatar">
+                <div class="testimonial-name">Drine Ben</div>
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Professionnel sympathique, très sérieux, ponctuel et efficace. Très bon travail réalisé dans les délais !"</p>
+            </div>
+        </div>
+     </div>
+</section>
+
+{{/* Final Section */}}
+<section class="final-section">
+    <div class="final-content">
+        <h2 class="final-title">En panne à Clermont-Ferrand, Issoire ou Vic-le-Comte ?</h2>
+        <p class="final-subtitle">J'interviens rapidement à votre domicile dans un rayon de 50 km.</p>
+        <div class="bottom-contact-buttons">
+            <a class="btn button-primary" href="tel:0789500369">07 89 50 03 69</a>
+            <a class="btn button-secondary" href="mailto:vermeauplomberie@gmail.com">vermeauplomberie@gmail.com</a>
+        </div>
+    </div>
+</section>
+{{ end }}
