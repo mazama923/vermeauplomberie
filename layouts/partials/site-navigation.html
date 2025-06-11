@@ -12,27 +12,33 @@
     {{/* Navigation Links */}}
     <div class="flex-l items-center">
       {{ partial "i18nlist.html" . }}
+      {{/* Apply common classes to list items */}}
       <ul class="flex flex-wrap justify-center {{ if eq $.Site.Language.LanguageDirection "rtl" }}pr0 ml3{{ else }}pl0 mr3{{ end }}">
-        {{/* Accueil Link */}}
+        {{/* Accueil Link - Removed active state */}}
+        {{ $accueilURL := .Site.Home.RelPermalink }}
         <li class="list f5 f4-ns fw4 dib mh2 {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl0 pr0{{ else }}pr0 pl0{{ end }}">
-          <a class="hover-white white no-underline nav-link{{ if eq .Page.RelPermalink .Site.Home.RelPermalink }} active-link{{ end }}" href="{{ .Site.Home.RelPermalink }}">Accueil</a>
+          {{/* Removed: {{ if eq .Page.RelPermalink $accueilURL }} active-link{{ end }} */}}
+          <a class="hover-white white no-underline nav-link" href="{{ $accueilURL }}">Accueil</a>
         </li>
-        {{/* A Propos Link */}}
+
+        {{/* A Propos Link - Removed active state */}}
+        {{ $aProposURL := "a-propos" | relURL }}
         <li class="list f5 f4-ns fw4 dib mh2 {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl0 pr0{{ else }}pr0 pl0{{ end }}">
-          {{ $url := "a-propos" | relURL }}
-          <a class="hover-white white no-underline nav-link{{ if eq .Page.RelPermalink $url }} active-link{{ end }}" href="{{ $url }}">À propos</a>
+          <a class="hover-white white no-underline nav-link" href="{{ $aProposURL }}">À propos</a>
         </li>
-        {{/* Services Dropdown */}}
-        {{/* Check if current page is a descendant of /services/ to highlight the parent link */}}
-        {{ $isServiceSection := strings.HasPrefix .Page.RelPermalink ("/services/" | relURL) }}
-        <li class="list f5 f4-ns fw4 dib relative dropdown-li mh2 {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl0 pr0{{ else }}pr0 pl0{{ end }}{{ if $isServiceSection }} active-parent{{ end }}">
+
+        {{/* Services Dropdown - Removed active state on parent link */}}
+        <li class="list f5 f4-ns fw4 dib relative dropdown-li mh2 {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl0 pr0{{ else }}pr0 pl0{{ end }}">
           <a href="#" class="hover-white white no-underline" aria-haspopup="true" aria-expanded="false">
             Services
+            {{/* SVG icon (keep as is for now) */}}
             <svg class="ml1" width="10" height="10" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" style="display: inline-block; vertical-align: middle;">
               <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
             </svg>
           </a>
+          {{/* Dropdown Content - Added Transparency Style */}}
           <ul id="services-dropdown" class="absolute bg-white pa2 shadow-1 dropdown-ul" style="min-width:200px; z-index:100; top: 100%; left: 0; background-color: rgba(255, 255, 255, 0.9);">
+            {{/* Dropdown Links - Apply hover styles, no active state */}}
             <li><a class="black no-underline db pv1 ph2" href="{{ "services/depannage" | relURL }}">Dépannage</a></li>
             <li><a class="black no-underline db pv1 ph2" href="{{ "services/renovation-salle-de-bain" | relURL }}">Rénovations de salle de bain</a></li>
             <li><a class="black no-underline db pv1 ph2" href="{{ "services/installation-plomberie" | relURL }}">Installation de plomberie</a></li>
@@ -40,9 +46,11 @@
             <li><a class="black no-underline db pv1 ph2" href="{{ "services/climatisation" | relURL }}">Climatisations</a></li>
           </ul>
         </li>
+
+        {{/* Réalisations Link - Removed active state */}}
+        {{ $realisationsURL := "realisations" | relURL }}
         <li class="list f5 f4-ns fw4 dib mh2 {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl0 pr0{{ else }}pr0 pl0{{ end }}">
-           {{ $url := "realisations" | relURL }}
-          <a class="hover-white white no-underline nav-link{{ if eq .Page.RelPermalink $url }} active-link{{ end }}" href="{{ $url }}">Réalisations</a>
+          <a class="hover-white white no-underline nav-link" href="{{ $realisationsURL }}">Réalisations</a>
         </li>
       </ul>
       {{ partialCached "social/follow.html" . }}
@@ -61,37 +69,54 @@
   display: block;
 }
 
-/* Hover effect for standard navigation links - Change text color to orange */
-/* Apply only to non-active links */
-.nav-link:not(.active-link):hover {
-  color: var(--color-orange);
-  /* Remove border-bottom and padding-bottom from previous hover */
-  border-bottom: none;
-  padding-bottom: 0;
+/* --- Styles for Main Navigation Links --- */
+
+/* Base style for main nav links (color is handled by Tachyons 'white' class) */
+.nav-link {
+  /* Ensure no default underline/padding */
+  border-bottom: none !important; /* Use !important to override Tachyons or other rules if necessary */
+  padding-bottom: 0 !important; /* Use !important to override Tachyons or other rules if necessary */
+  transition: color 0.2s ease-in-out; /* Smooth color transition on hover */
 }
 
-/* Style for the active navigation link - Permanent orange underline */
+/* Hover effect for ALL main navigation links - Change text color to orange */
+.nav-link:hover {
+  color: var(--color-orange);
+}
+
+/* Removed: Style for the active "Accueil" link - No more permanent orange underline */
+/*
 .active-link {
   color: var(--color-orange);
   border-bottom: 1px solid var(--color-orange);
-  padding-bottom: 2px; /* Space between text and underline */
+  padding-bottom: 2px;
 }
+*/
 
-/* Optional: Highlight the parent "Services" link if a service page is active */
-.active-parent > a {
-    color: var(--color-orange);
+/* --- Styles for Dropdown Links --- */
+
+/* Base style for dropdown links (color is handled by Tachyons 'black' class) */
+.dropdown-ul a {
+   transition: color 0.2s ease-in-out; /* Smooth color transition on hover */
 }
-
 
 /* Hover effect for dropdown links - Change text color to orange */
+/* (You can keep the hover-bg-light-gray class if you want the background effect too) */
+.dropdown-ul a.hover-bg-light-gray:hover {
+   color: var(--color-orange);
+}
+/* If you removed hover-bg-light-gray from dropdown links */
 .dropdown-ul a:hover {
-  color: var(--color-orange);
-  <!-- background-color: var(--color-white); -->
+   color: var(--color-orange);
 }
 
-/* Style for icons within dropdown */
-.dropdown-ul a i {
+
+/* Style for icons within dropdown (adjust if you add icons back) */
+/*
+.dropdown-ul a i,
+.dropdown-ul a svg {
     vertical-align: middle; /* Align icon vertically with text */
     /* You might need to adjust margin depending on your icon size */
-}
+/* } */
+
 </style>
