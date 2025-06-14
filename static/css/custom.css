@@ -7,7 +7,7 @@
   --color-white: #FFFFFF;
   --color-light-grey: #F2F2F2;
   --color-light-blue-card: #F0F8FB;
-  --texture-image: url('/img/texture/textur.png');
+  --texture-image: url('img/texture/textur.png');
 }
 
 /* fonts */
@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .hero-section {
   background-image:
-    url("../img/hero-background.png"),
+    url("img/hero-background.png"),
     var(--texture-image);
 }
 .hero-overlay {
@@ -176,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Final Section */
 .final-section {
   background-image:
-    url("../img/bottom-background.png"),
+    url("img/bottom-background.png"),
     var(--texture-image);
   background-size: cover;
   background-position: center top;
