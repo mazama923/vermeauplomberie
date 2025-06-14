@@ -58,6 +58,9 @@ jobs:
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/hugo_cache"
 
+      - name: Add CNAME for custom domain
+        run: echo "vermeauplomberie.fr" > ./public/CNAME
+
       - name: Optimize site with Jampack
         run: npx jampack public
 
