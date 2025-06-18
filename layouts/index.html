@@ -1,14 +1,4 @@
 {{ define "main" }}
-
-<style>
-  /* Apply fonts */
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700; /* Oswald often looks good bold */
-    color: var(--color-blue); /* Default heading color */
-  }
-</style>
-
 {{/* Hero Section */}}
 <section class="hero-section">
     {{/* Optional Overlay */}}
@@ -17,8 +7,7 @@
         <h1 class="hero-title">Verm'eau Plomberie,<br>des solutions qui coulent de source !</h1>
         <p class="hero-subtitle">Des services de plomberie fiables et professionnels pour tous vos besoins domestiques.</p>
         <div class="hero-contact-buttons">
-            <a class="btn button-primary" href="tel:0789500369">07 89 50 03 69</a>
-            <a class="btn button-secondary" href="mailto:vermeauplomberie@gmail.com">vermeauplomberie@gmail.com</a>
+              {{ partial "contact-buttons.html" . }}
         </div>
     </div>
 </section>
@@ -127,8 +116,7 @@
         <h2 class="final-title">En panne à Clermont-Ferrand, Issoire ou Vic-le-Comte ?</h2>
         <p class="final-subtitle">J'interviens rapidement à votre domicile dans un rayon de 50 km.</p>
         <div class="bottom-contact-buttons">
-            <a class="btn button-primary" href="tel:0789500369">07 89 50 03 69</a>
-            <a class="btn button-secondary" href="mailto:vermeauplomberie@gmail.com">vermeauplomberie@gmail.com</a>
+              {{ partial "contact-buttons.html" . }}
         </div>
     </div>
 </section>

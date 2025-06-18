@@ -2,8 +2,7 @@
   <div class="hero-content-wrapper container">
     <h1 class="hero-title">{{ .Title }}</h1>
     <div class="hero-contact-buttons">
-      <a href="tel:{{ .Params.contact_phone }}" class="btn button-primary">{{ .Params.contact_phone }}</a>
-      <a href="mailto:{{ .Params.contact_email }}" class="btn button-secondary">{{ .Params.contact_email }}</a>
+      {{ partial "contact-buttons.html" . }}
     </div>
   </div>
 </section>
