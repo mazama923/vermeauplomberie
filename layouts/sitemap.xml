@@ -1,37 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
-    <loc>http://localhost:1313/realisations/</loc>
+    <loc>{{ .Site.BaseURL | absURL }}realisations/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/a-propos/</loc>
+    <loc>{{ .Site.BaseURL | absURL }}a-propos/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/services/chauffe-eau/</loc>
+    <loc>{{ .Site.BaseURL | absURL }}services/chauffe-eau/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/services/climatisation/</loc>
+    <loc>{{ .Site.BaseURL | absURL }}services/climatisation/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/services/depannage/</loc>
+    <loc>{{ .Site.BaseURL | absURL }}services/depannage/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/services/installation-plomberie/</loc>
+    <loc>{{ .Site.BaseURL | absURL }}services/installation-plomberie/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/services/renovation-salle-de-bain/</loc>
+    <loc>{{ .Site.BaseURL | absURL }}services/renovation-salle-de-bain/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>{{ .Site.BaseURL | absURL }}</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
 </urlset>
