@@ -14,9 +14,9 @@
       {{ partial "i18nlist.html" . }}
       {{/* Apply common classes to list items */}}
       <ul class="flex flex-wrap justify-center {{ if eq $.Site.Language.LanguageDirection "rtl" }}pr0 ml3{{ else }}pl0 mr3{{ end }}">
-        {{/* Accueil Link - Removed active state */}}
+        {{/* Accueil Link - Added Tachyons classes for display control */}}
         {{ $accueilURL := .Site.Home.RelPermalink }}
-        <li class="list f5 f4-ns fw4 dib mh2 {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl0 pr0{{ else }}pr0 pl0{{ end }}">
+        <li class="list f5 f4-ns fw4 mh2 {{ if eq $.Site.Language.LanguageDirection "rtl" }}pl0 pr0{{ else }}pr0 pl0{{ end }} dn dib-ns"> {{/* <-- Added dn and dib-ns here */}}
           {{/* Removed: {{ if eq .Page.RelPermalink $accueilURL }} active-link{{ end }} */}}
           <a class="hover-white white no-underline nav-link" href="{{ $accueilURL }}">Accueil</a>
         </li>
@@ -58,6 +58,7 @@
   </div>
 </nav>
 
+{{/* Your existing CSS styles */}}
 <style>
 /* Hide the dropdown content by default */
 .dropdown-ul {
