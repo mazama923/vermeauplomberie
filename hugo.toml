@@ -14,7 +14,7 @@ filename = "sitemap.xml"
 [params]
 text_color = ""
 author = "Verm'eau plomberie"
-favicon = "favicon.svg"
+favicon = "favicon.ico"
 site_logo = "logo.svg"
 description = "Service de plomberie professionnel à Clermont-Ferrand, Issoire, Vic-le-Comte et les environs"
 

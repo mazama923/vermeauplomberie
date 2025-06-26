@@ -4,7 +4,7 @@ subtitle: "Un artisan de confiance, proche de chez vous."
 
 hero_image: "img/hero-background.png"
 
-info_box_icon: "favicon.svg"
+info_box_icon: "favicon.ico"
 
 info_box_intro: |
   Je m’appelle Julien Vermorel, et j’ai fondé Verm’eau Plomberie avec une idée simple : proposer un service honnête, soigné et accessible, pour répondre aux besoins réels des habitants du Puy-de-Dôme.
