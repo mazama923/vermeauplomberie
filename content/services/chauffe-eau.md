@@ -2,7 +2,7 @@
 title: "Chauffe-eau"
 subtitle: "Une eau chaude disponible, sans mauvaise surprise."
 
-hero_image: "img/services/chauffe-eau/hero-background.png"
+hero_image: "img/services/chauffe-eau/hero-background.avif"
 
 info_box_icon: "icons/chauffe-eau.svg"
 
@@ -27,7 +27,7 @@ services_list_2:
 bottom_cta_title: "En panne à Clermont-Ferrand, Issoire ou Vic-le-Comte ?"
 bottom_cta_subtitle: "J'interviens rapidement à votre domicile dans un rayon de 50 km."
 
-bottom_image: "img/bottom-background.png"
+bottom_image: "img/bottom-background.avif"
 
 contact_phone: "07 89 50 03 69"
 contact_email: "vermeauplomberie@gmail.com"

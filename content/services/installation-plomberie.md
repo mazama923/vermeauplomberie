@@ -2,7 +2,7 @@
 title: "Installation de plomberie"
 subtitle: "Des installations fiables, durables, et pensées pour votre projet."
 
-hero_image: "img/hero-background.png"
+hero_image: "img/hero-background.avif"
 
 info_box_icon: "icons/installation.svg"
 
@@ -30,7 +30,7 @@ services_list_2:
 bottom_cta_title: "En panne à Clermont-Ferrand, Issoire ou Vic-le-Comte ?"
 bottom_cta_subtitle: "J'interviens rapidement à votre domicile dans un rayon de 50 km."
 
-bottom_image: "img/bottom-background.png"
+bottom_image: "img/bottom-background.avif"
 
 contact_phone: "07 89 50 03 69"
 contact_email: "vermeauplomberie@gmail.com"

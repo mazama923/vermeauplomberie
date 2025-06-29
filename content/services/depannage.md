@@ -2,7 +2,7 @@
 title: "Dépannage"
 subtitle: "Une fuite ? Un bouchon ? Je suis là pour vous aider rapidement."
 
-hero_image: "img/services/depannage/hero-background.png"
+hero_image: "img/services/depannage/hero-background.avif"
 
 info_box_icon: "icons/depannage.svg"
 
@@ -26,7 +26,7 @@ steps_list:
 bottom_cta_title: "En panne à Clermont-Ferrand, Issoire ou Vic-le-Comte ?"
 bottom_cta_subtitle: "J'interviens rapidement à votre domicile dans un rayon de 50 km."
 
-bottom_image: "img/bottom-background.png"
+bottom_image: "img/bottom-background.avif"
 
 contact_phone: "07 89 50 03 69"
 contact_email: "vermeauplomberie@gmail.com"
