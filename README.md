@@ -19,3 +19,8 @@ Built using [Hugo](https://gohugo.io/) and the "Ananke" theme.
 Run a local development server with:
 ```bash
 hugo server
+```
+
+## UI Credits
+
+The website’s user interface was designed by [Claudia](https://www.behance.net/gallery/217834701/Identit-Visuelle-Site-Vistrine-Vermeau-Plomberie).
