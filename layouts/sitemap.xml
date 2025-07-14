@@ -3,42 +3,34 @@
 
   <url>
     <loc>{{ .Site.BaseURL | absURL }}realisations/</loc>
-    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>{{ .Site.BaseURL | absURL }}a-propos/</loc>
-    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url><url>
     <loc>{{ .Site.BaseURL | absURL }}services/chauffe-eau/</loc>
-    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>{{ .Site.BaseURL | absURL }}services/climatisation/</loc>
-    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>{{ .Site.BaseURL | absURL }}services/depannage/</loc>
-    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>{{ .Site.BaseURL | absURL }}services/installation-plomberie/</loc>
-    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>{{ .Site.BaseURL | absURL }}services/renovation-salle-de-bain/</loc>
-    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>{{ .Site.BaseURL | absURL }}</loc>
-    <lastmod>{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
