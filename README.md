@@ -1,7 +1,5 @@
 # Verm'eau plomberie - Site statique
 
-Static site created with [Hugo](https://gohugo.io/) and the Ananke theme.
-
 ---
 
 ## Project Overview
