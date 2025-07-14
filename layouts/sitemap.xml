@@ -7,8 +7,8 @@
     <priority>0.5</priority>
   </url><url>
     <loc>{{ .Site.BaseURL | absURL }}a-propos/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url><url>
     <loc>{{ .Site.BaseURL | absURL }}services/chauffe-eau/</loc>
     <changefreq>monthly</changefreq>
@@ -31,8 +31,8 @@
     <priority>0.5</priority>
   </url><url>
     <loc>{{ .Site.BaseURL | absURL }}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
 
 </urlset>

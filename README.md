@@ -1,12 +1,10 @@
 # Verm'eau plomberie - Site statique
 
-Site statique créé avec [Hugo](https://gohugo.io/) et le thème Ananke.
-
 ---
 
 ## Project Overview
 
-This is the static website for Verm'eau Plomberie.  
+This is the static website for Verm'eau Plomberie.
 Built using [Hugo](https://gohugo.io/) and the "Ananke" theme.
 
 ## Deployment
