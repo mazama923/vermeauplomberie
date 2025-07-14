@@ -7,7 +7,6 @@
   --color-white: #FFFFFF;
   --color-light-grey: #F2F2F2;
   --color-light-blue-card: #F0F8FB;
-  --texture-image: url('../img/texture/textur.avif');
 }
 
 /* fonts */
@@ -72,8 +71,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .hero-section {
   background-image:
-    url("../img/hero-background.avif"),
-    var(--texture-image);
+    url("../img/hero-background.avif");
 }
 .hero-overlay {
   position: absolute;
@@ -178,8 +176,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Final Section */
 .final-section {
   background-image:
-    url("../img/bottom-background.avif"),
-    var(--texture-image);
+    url("../img/bottom-background.avif");
   background-size: cover;
   background-position: center top;
   color: var(--color-white);
@@ -213,7 +210,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Services Section */
 .services-section {
-  background-image: var(--texture-image);
   background-repeat: repeat;
   padding: 4rem 1rem;
 }
@@ -314,7 +310,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Artisan Section */
 .artisan-section {
-  background-image: var(--texture-image);
   background-repeat: repeat;
   padding: 4rem 1rem;
 }
@@ -407,7 +402,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Testimonials Section */
 .testimonials-section {
-  background-image: var(--texture-image);
   background-repeat: repeat;
   padding: 4rem 1rem;
   padding-bottom: 8rem;
