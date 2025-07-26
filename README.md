@@ -1,5 +1,4 @@
-# Verm'eau plomberie - Site statique
-
+# Verm'eau plomberie - Static site
 ---
 
 ## Project Overview
