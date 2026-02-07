@@ -9,7 +9,7 @@ Built using [Hugo](https://gohugo.io/) and the "Ananke" theme.
 ## Deployment
 
 - The site is automatically built and deployed via GitHub Actions on each push to the `main` branch.
-- Hosted with GitHub Pages at [https://vermeauplomberie.fr/](https://vermeauplomberie.fr/)
+- Hosted with GitHub Pages at [https://mazama923.github.io/vermeauplomberie/](https://mazama923.github.io/vermeauplomberie/)
 
 ## Local Development
 
