@@ -60,6 +60,7 @@
       {{ template "_internal/google_analytics.html" . }}
     {{ end }}
 	{{ block "head" . }}{{ partials.Include "head-additions.html" . }}{{ end }}
+    <script defer src="https://umami.mazama923.duckdns.org/script.js" data-website-id="f04ede50-a039-4757-b6a3-df559982d801"></script>
   </head>
 
   {{- $environment := hugo.Environment | compare.Default "production" -}}
